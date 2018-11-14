@@ -32,10 +32,6 @@ $master = ping('192.168.123.242', 80, 1);
 $sensehat = ping('192.168.123.241', 80, 1);
 $piface = ping('192.168.123.240', 80, 1);
 $laby = ping('192.168.123.241', 80, 1);
-// $master = ping('127.0.0.1', 80, 1);
-// $sensehat = ping('127.0.0.1', 80, 1);
-// $piface = ping('127.0.0.1', 80, 1);
-// $laby = ping('127.0.0.1', 80, 1);
 
 $result = new result($idGame,
 $cableSelect[0],
