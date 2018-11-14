@@ -14,12 +14,15 @@ using System.Diagnostics;
 using System.Xml.Linq;
 using Newtonsoft.Json.Linq;
 using System.IO;
+using System.Xml;
+using System.Xml.Serialization;
 
 namespace WFLostNFurious
 {
     public partial class frmMain : Form
     {
-        const string SERVER_ADDRESS = "http://192.168.123.242";
+        const string SERVER_ADDRESS = "https://escape.cfpti.ch";
+        const string GAME_INFO_FILE_PATH = "gameInfos.json";
         //Propriete
         enum Direction { Haut, Bas, Gauche, Droite };
 
@@ -44,6 +47,7 @@ namespace WFLostNFurious
             LstLabyrinthe = new List<Bloc>();
             LstInstruction = new List<string>();
             SeparerCode();
+            tmrCheckStatus.Enabled = true;
         }
 
         /// <summary>
@@ -53,12 +57,13 @@ namespace WFLostNFurious
         {
             try
             {
-                string recu = Jeu.RecevoirInfos(SERVER_ADDRESS + "/webdispatcher/soluce.php");
-                string[] infos = recu.Split(',');
+                string jsonReceived = Jeu.RecevoirInfos(SERVER_ADDRESS + "/server/soluce.php");
 
-                string[] tmp = infos[8].Split(':');
+                JSONParser jsonData = new JSONParser(jsonReceived);
 
-                codeAAfficher = tmp[1].Replace('}', ' ');
+                File.WriteAllText(GAME_INFO_FILE_PATH, jsonReceived);
+
+                this.CodeAAfficher = jsonData.GetValue("soluce2");
             }
             catch (Exception)
             {
@@ -143,7 +148,7 @@ namespace WFLostNFurious
         private void Gagner()
         {
             //Appele page php pour fin partie
-            Jeu.RecevoirInfos(SERVER_ADDRESS + "/webdispatcher/step2.php");
+            Jeu.RecevoirInfos(SERVER_ADDRESS + "/server/step2.php");
             //Fini la partie
             Jeu.EstEnJeu = false;
             //Le perso n'est plus en mouvement
@@ -170,7 +175,6 @@ namespace WFLostNFurious
                 BackColor = Color.Transparent
             };
             this.Controls.Add(lblCode);
-            lblCode.Click += this.label6_Click;
 
         }
 
@@ -455,73 +459,34 @@ namespace WFLostNFurious
             }
         }
 
-        private void label6_Click(object sender, EventArgs e)
-        {
-            Application.Restart();
-        }
-
         private void tmrCheckStatus_Tick(object sender, EventArgs e)
-        {/*
-            string path = "restarted.txt";
-
-            if (!File.Exists(path))
-            {
-                File.Create(path);
-                RestartApplication();
-            }
-            else if (File.Exists(path))
-            {
-                RestartApplication();
-            }*/
-        }
-
-        private void RestartApplication()
-        {/*
-            string path = "restarted.txt";
-
-            string restarted = File.ReadAllText(path, Encoding.UTF8);
-
-            if (!Convert.ToBoolean(restarted))
-            {
-                try
-                {
-                    string recu = Jeu.RecevoirInfos(SERVER_ADDRESS + "/webdispatcher/soluce.php");
-                    string[] infos = recu.Split(',');
-
-                    string[] step1Split = infos[10].Split(':');
-                    string[] step2Split = infos[11].Split(':');
-
-                    string step1Date = step1Split[1];
-                    string step2Date = step2Split[1];
-
-                    if (step1Date == "null" && step2Date == "null")
-                    {
-                        using (var tw = new StreamWriter(path, true))
-                        {
-                            tw.Write("true");
-                            tw.Close();
-                        }
-
-                        Application.Restart();
-                    }
-                }
-                catch (Exception)
-                {
-
-                }
-            }*/
-        }
-
-        /*
-        /// <summary>
-        /// Empêche la fermeture de l'application
-        /// </summary>
-        /// <param name="sender"></param>
-        /// <param name="e"></param>
-        private void FrmMain_FormClosing(object sender, FormClosingEventArgs e)
         {
-            e.Cancel = true;
+            string gameInfos = File.ReadAllText(GAME_INFO_FILE_PATH);
+
+            JSONParser JSONGameInfos = new JSONParser(gameInfos);
+
+            try
+            {
+                string jsonReceived = Jeu.RecevoirInfos(SERVER_ADDRESS + "/server/soluce.php");
+
+                JSONParser jsonData = new JSONParser(jsonReceived);
+
+                string oldIdGame = JSONGameInfos.GetValue("idGame");
+                string receivedIdGame = jsonData.GetValue("idGame");
+                string step1Date = jsonData.GetValue("step1");
+                string step2Date = jsonData.GetValue("step2");
+
+                if (receivedIdGame != oldIdGame && step1Date == "null" && step2Date == "null")
+                {
+                    File.WriteAllText(GAME_INFO_FILE_PATH, jsonReceived);
+
+                    Application.Restart();
+                }
+            }
+            catch (Exception)
+            {
+
+            }
         }
-        */
     }
 }

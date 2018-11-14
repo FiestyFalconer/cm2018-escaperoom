@@ -58,6 +58,7 @@
       <DependentUpon>frmMain.cs</DependentUpon>
     </Compile>
     <Compile Include="Jeu.cs" />
+    <Compile Include="JSONParser.cs" />
     <Compile Include="Personnage.cs" />
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />

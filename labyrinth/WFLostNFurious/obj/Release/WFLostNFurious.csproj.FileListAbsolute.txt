@@ -49,3 +49,15 @@ C:\laragon\www\cm2018-escaperoom\labyrinth\WFLostNFurious\obj\Release\WFLostNFur
 C:\laragon\www\cm2018-escaperoom\labyrinth\WFLostNFurious\obj\Release\WFLostNFurious.csproj.CopyComplete
 C:\laragon\www\cm2018-escaperoom\labyrinth\WFLostNFurious\obj\Release\WFLostNFurious.exe
 C:\laragon\www\cm2018-escaperoom\labyrinth\WFLostNFurious\obj\Release\WFLostNFurious.pdb
+E:\Web\www\cm2018-escaperoom\labyrinth\WFLostNFurious\bin\Release\WFLostNFurious.exe.config
+E:\Web\www\cm2018-escaperoom\labyrinth\WFLostNFurious\bin\Release\WFLostNFurious.exe
+E:\Web\www\cm2018-escaperoom\labyrinth\WFLostNFurious\bin\Release\WFLostNFurious.pdb
+E:\Web\www\cm2018-escaperoom\labyrinth\WFLostNFurious\bin\Release\Newtonsoft.Json.dll
+E:\Web\www\cm2018-escaperoom\labyrinth\WFLostNFurious\bin\Release\Newtonsoft.Json.xml
+E:\Web\www\cm2018-escaperoom\labyrinth\WFLostNFurious\obj\Release\WFLostNFurious.frmMain.resources
+E:\Web\www\cm2018-escaperoom\labyrinth\WFLostNFurious\obj\Release\WFLostNFurious.Properties.Resources.resources
+E:\Web\www\cm2018-escaperoom\labyrinth\WFLostNFurious\obj\Release\WFLostNFurious.csproj.GenerateResource.cache
+E:\Web\www\cm2018-escaperoom\labyrinth\WFLostNFurious\obj\Release\WFLostNFurious.csproj.CoreCompileInputs.cache
+E:\Web\www\cm2018-escaperoom\labyrinth\WFLostNFurious\obj\Release\WFLostNFurious.csproj.CopyComplete
+E:\Web\www\cm2018-escaperoom\labyrinth\WFLostNFurious\obj\Release\WFLostNFurious.exe
+E:\Web\www\cm2018-escaperoom\labyrinth\WFLostNFurious\obj\Release\WFLostNFurious.pdb

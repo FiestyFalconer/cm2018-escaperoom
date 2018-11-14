@@ -46,7 +46,6 @@
             this.label3 = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
             this.label1 = new System.Windows.Forms.Label();
-            this.label6 = new System.Windows.Forms.Label();
             this.tmrCheckStatus = new System.Windows.Forms.Timer(this.components);
             this.pnlCommandes.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
@@ -210,7 +209,7 @@
             this.label4.Name = "label4";
             this.label4.Size = new System.Drawing.Size(390, 130);
             this.label4.TabIndex = 3;
-            this.label4.Text = "- Une fois sur du chemin appuyer sur play et Raichu fera les instructions dans la" +
+            this.label4.Text = "- Une fois sûr du chemin appuyer sur play et Raichu fera les instructions dans la" +
     " liste ";
             // 
             // label3
@@ -242,19 +241,8 @@
             this.label1.TabIndex = 0;
             this.label1.Text = "Instructions";
             // 
-            // label6
-            // 
-            this.label6.AutoSize = true;
-            this.label6.Location = new System.Drawing.Point(1456, 0);
-            this.label6.Name = "label6";
-            this.label6.Size = new System.Drawing.Size(41, 13);
-            this.label6.TabIndex = 12;
-            this.label6.Text = "Restart";
-            this.label6.Click += new System.EventHandler(this.label6_Click);
-            // 
             // tmrCheckStatus
             // 
-            this.tmrCheckStatus.Enabled = true;
             this.tmrCheckStatus.Interval = 1000;
             this.tmrCheckStatus.Tick += new System.EventHandler(this.tmrCheckStatus_Tick);
             // 
@@ -263,7 +251,6 @@
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(1920, 1080);
-            this.Controls.Add(this.label6);
             this.Controls.Add(this.pnlInstructions);
             this.Controls.Add(this.btnStartGame);
             this.Controls.Add(this.pnlCommandes);
@@ -279,7 +266,6 @@
             this.pnlInstructions.ResumeLayout(false);
             this.pnlInstructions.PerformLayout();
             this.ResumeLayout(false);
-            this.PerformLayout();
 
         }
 
@@ -304,7 +290,6 @@
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.Label label5;
-        private System.Windows.Forms.Label label6;
         private System.Windows.Forms.Timer tmrCheckStatus;
     }
 }

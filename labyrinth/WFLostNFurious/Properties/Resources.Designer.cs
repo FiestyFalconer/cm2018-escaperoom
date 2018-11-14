@@ -61,15 +61,6 @@ namespace WFLostNFurious.Properties {
         }
         
         /// <summary>
-        ///   Recherche une chaîne localisée semblable à false.
-        /// </summary>
-        internal static string app_restarted {
-            get {
-                return ResourceManager.GetString("app_restarted", resourceCulture);
-            }
-        }
-        
-        /// <summary>
         ///   Recherche une ressource localisée de type System.Drawing.Bitmap.
         /// </summary>
         internal static System.Drawing.Bitmap logoCFPT {
