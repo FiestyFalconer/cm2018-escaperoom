@@ -1,0 +1,91 @@
+body {
+  background: #272828;
+  border-top: 5px solid #35c2ff;
+  color: white;
+}
+
+header {
+  background: #173463;
+  padding: 25px;
+}
+
+header h1 {
+  padding: 0px;
+  margin: 0px;
+}
+
+header button.btn {
+  border-radius: 0px;
+  border: none;
+}
+
+#riddles {
+  margin-top: 20px;
+  text-align: center;
+}
+
+#riddles .raspberry-block,
+#riddles .webapp-block {
+  background: #3e3f3f;
+}
+
+#riddles .raspberry-block span {
+  font-size: 12px;
+}
+
+#riddles .raspberry-text {
+  margin-top: 35px;
+}
+
+#riddles .webapp-text {
+  margin-top: 55px;
+}
+
+#riddles .raspberry {
+  height: 85px;
+  line-height: 85px;
+  background: #3e3f3f;
+}
+
+#riddles .raspberry .in-progress,
+#riddles .webapp-text .in-progress {
+  color: #ff9e49;
+}
+
+#riddles .raspberry .done,
+#riddles .webapp-text .done {
+  color: #a7f246;
+}
+
+#riddles .raspberry .error,
+#riddles .webapp-text .error {
+  color: #e52d2d;
+}
+
+#riddles .raspberry h2 {
+  line-height: 85px;
+}
+
+.riddle-full-height {
+  height: 186px;
+  max-height: 186px;
+}
+
+.chevron {
+  margin-top: 3.5rem;
+  font-size: 5rem;
+}
+
+#timer {
+  position: fixed;
+  width: 250px;
+  height: 150px;
+  text-align: center;
+  right: 0px;
+  bottom: 0px;
+  background: #173463;
+  line-height: 150px;
+  font-size: 3em;
+  border-top: 3px solid white;
+  border-left: 3px solid white;
+}
