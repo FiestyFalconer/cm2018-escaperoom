@@ -21,7 +21,7 @@ namespace WFLostNFurious
 {
     public partial class frmMain : Form
     {
-        const string SERVER_ADDRESS = "https://192.168.123.242";
+        const string SERVER_ADDRESS = "http://192.168.123.242";
         const string GAME_INFO_FILE_PATH = "gameInfos.json";
         //Propriete
         enum Direction { Haut, Bas, Gauche, Droite };
@@ -61,7 +61,7 @@ namespace WFLostNFurious
 
                 JSONParser jsonData = new JSONParser(jsonReceived);
 
-                File.WriteAllText(GAME_INFO_FILE_PATH, jsonReceived);
+                WriteGameInfosData(jsonReceived);
 
                 this.CodeAAfficher = jsonData.GetValue("soluce2");
             }
@@ -461,7 +461,13 @@ namespace WFLostNFurious
 
         private void tmrCheckStatus_Tick(object sender, EventArgs e)
         {
-            string gameInfos = File.ReadAllText(GAME_INFO_FILE_PATH);
+
+            StreamReader file = File.OpenText(GAME_INFO_FILE_PATH);
+
+            string gameInfos = file.ReadToEnd();
+
+            file.Close();
+            file.Dispose();
 
             JSONParser JSONGameInfos = new JSONParser(gameInfos);
 
@@ -478,15 +484,25 @@ namespace WFLostNFurious
 
                 if (receivedIdGame != oldIdGame && step1Date == "null" && step2Date == "null")
                 {
-                    File.WriteAllText(GAME_INFO_FILE_PATH, jsonReceived);
+                    WriteGameInfosData(jsonReceived);
 
                     Application.Restart();
                 }
             }
-            catch (Exception)
+            catch (Exception ex)
             {
-
+                Console.WriteLine(ex.Message);
             }
+        }
+
+        private void WriteGameInfosData(string data)
+        {
+            StreamWriter writer = new StreamWriter(GAME_INFO_FILE_PATH, false);
+
+            writer.WriteLine(data);
+
+            writer.Close();
+            writer.Dispose();
         }
     }
 }

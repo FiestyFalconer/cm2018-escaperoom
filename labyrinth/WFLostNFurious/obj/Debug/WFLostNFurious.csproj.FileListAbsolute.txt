@@ -29,7 +29,6 @@ C:\laragon\www\cm2018-escaperoom\labyrinth\WFLostNFurious\bin\Debug\WFLostNFurio
 C:\laragon\www\cm2018-escaperoom\labyrinth\WFLostNFurious\bin\Debug\WFLostNFurious.pdb
 C:\laragon\www\cm2018-escaperoom\labyrinth\WFLostNFurious\bin\Debug\Newtonsoft.Json.dll
 C:\laragon\www\cm2018-escaperoom\labyrinth\WFLostNFurious\bin\Debug\Newtonsoft.Json.xml
-C:\laragon\www\cm2018-escaperoom\labyrinth\WFLostNFurious\obj\Debug\WFLostNFurious.csprojAssemblyReference.cache
 C:\laragon\www\cm2018-escaperoom\labyrinth\WFLostNFurious\obj\Debug\WFLostNFurious.frmMain.resources
 C:\laragon\www\cm2018-escaperoom\labyrinth\WFLostNFurious\obj\Debug\WFLostNFurious.Properties.Resources.resources
 C:\laragon\www\cm2018-escaperoom\labyrinth\WFLostNFurious\obj\Debug\WFLostNFurious.csproj.GenerateResource.cache
