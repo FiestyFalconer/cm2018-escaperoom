@@ -21,7 +21,7 @@ namespace WFLostNFurious
 {
     public partial class frmMain : Form
     {
-        const string SERVER_ADDRESS = "https://escape.cfpti.ch";
+        const string SERVER_ADDRESS = "https://192.168.123.242";
         const string GAME_INFO_FILE_PATH = "gameInfos.json";
         //Propriete
         enum Direction { Haut, Bas, Gauche, Droite };
@@ -57,7 +57,7 @@ namespace WFLostNFurious
         {
             try
             {
-                string jsonReceived = Jeu.RecevoirInfos(SERVER_ADDRESS + "/server/soluce.php");
+                string jsonReceived = Jeu.RecevoirInfos(SERVER_ADDRESS + "/webdispatcher/soluce.php");
 
                 JSONParser jsonData = new JSONParser(jsonReceived);
 
@@ -148,7 +148,7 @@ namespace WFLostNFurious
         private void Gagner()
         {
             //Appele page php pour fin partie
-            Jeu.RecevoirInfos(SERVER_ADDRESS + "/server/step2.php");
+            Jeu.RecevoirInfos(SERVER_ADDRESS + "/webdispatcher/step2.php");
             //Fini la partie
             Jeu.EstEnJeu = false;
             //Le perso n'est plus en mouvement
@@ -467,7 +467,7 @@ namespace WFLostNFurious
 
             try
             {
-                string jsonReceived = Jeu.RecevoirInfos(SERVER_ADDRESS + "/server/soluce.php");
+                string jsonReceived = Jeu.RecevoirInfos(SERVER_ADDRESS + "/webdispatcher/soluce.php");
 
                 JSONParser jsonData = new JSONParser(jsonReceived);
 
