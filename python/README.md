@@ -15,7 +15,7 @@ Le but était de créer 3 scripts python permettant de gèrer la première énig
 
 ## Les scripts
 
-<aside style="color:red;font-weight:bold">/!\ La configuration du serveur Apache doit être configurer d'une certaine manière, voir : <a href="https://github.com/CFPTI/cm2018-escaperoom/blob/master/python/">Configuration Apache</a></aside>
+<aside style="color:red;font-weight:bold">/!\ La configuration du serveur Apache doit être configurer d'une certaine manière, voir : <a href="https://github.com/CFPTI/cm2018-escaperoom/blob/master/python/ApacheConfiguration.md">Configuration Apache</a></aside>
 
 ### Script de détection de câbles : [**_cables_detector.py_**](https://github.com/CFPTI/cm2018-escaperoom/blob/master/python/cables_detector.py)
 
