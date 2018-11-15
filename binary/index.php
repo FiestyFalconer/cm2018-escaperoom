@@ -1,8 +1,8 @@
 <?php
 /*
-Auteur  : Lopes Miguel, Troller Fabian, Juling Guntram
-Date    : 2018.11.06
-Description : Code javascript cité des metiers
+ * Auteurs  : Lopes Miguel, Troller Fabian, Juling Guntram
+ * Date    : 2018.11.06
+ * Description : Code HTML cité des metiers
  */
 
 include("solution.php");
@@ -22,7 +22,7 @@ header("Expires: Sat, 26 Jul 1997 05:00:00 GMT"); // Date dans le passé
 
     <script>var ADDR = JSON.parse('<?= json_encode(ADDR) ?>');
         var solution = JSON.parse('<?= json_encode($solution) ?>');</script>
-    <script src="./binary.js?d=<?php echo date('hms',time()); ?>"></script>
+    <script src="./binary.js?d=<?php echo date('hms', time()); ?>"></script>
 </head>
 
 <body class="text-center" style="font-size: 2.5em;">
