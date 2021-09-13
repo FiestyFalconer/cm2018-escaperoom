@@ -9,7 +9,7 @@
 DEFINE('DB_HOST', "127.0.0.1");
 DEFINE('DB_NAME', "escapegame");
 DEFINE('DB_USER', "root");
-DEFINE('DB_PASS', "raspberry");
+DEFINE('DB_PASS', "");
 
 // Méthode qui permet de créer une variable static pour la connexion à la base de données
 function getConnexion(){

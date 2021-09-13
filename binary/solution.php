@@ -5,7 +5,7 @@
  * Description : Code PHP cité des metiers
  */
 
-const ADDR = "http://192.168.123.242/webdispatcher";// ip du serveur
+const ADDR = "http://git/cm2018-escaperoom/webdispatcher/";// ip du serveur
 const DEFAULT_VALUE = ["A", "9"];// solutions par defaut
 
 // recupere les solutions du serveur sous forme de JSON
@@ -25,6 +25,9 @@ function getSolutionJSON()
     } else {
         $Table = DEFAULT_VALUE;
     }
+
+    // var_dump($Table);
+    // die();
     return $Table;// retourne les solutions sous forme de table
 }
 ?>

@@ -6,7 +6,7 @@ SET foreign_key_checks = 0;
 SET sql_mode = 'NO_AUTO_VALUE_ON_ZERO';
 
 -- CREATE DATABASE `escapegame` /*!40100 DEFAULT CHARACTER SET utf8 */;
--- USE `escapegame`;
+USE `escapegame`;
 
 DROP TABLE IF EXISTS `cables`;
 CREATE TABLE `cables` (

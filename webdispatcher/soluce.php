@@ -28,10 +28,10 @@ $indice[] = $getInfoGameSet['indice1'];
 $indice[] = $getInfoGameSet['indice2'];
 $binary = $getInfoGameSet['binary'];
 
-$master = ping('192.168.123.242', 80, 1);
-$sensehat = ping('192.168.123.241', 80, 1);
-$piface = ping('192.168.123.240', 80, 1);
-$laby = ping('192.168.123.241', 80, 1);
+// $master = ping('192.168.123.242', 80, 1);
+// $sensehat = ping('192.168.123.241', 80, 1);
+// $piface = ping('192.168.123.240', 80, 1);
+// $laby = ping('192.168.123.241', 80, 1);
 
 $result = new result($idGame,
 $cableSelect[0],
