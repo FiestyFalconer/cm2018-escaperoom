@@ -1,26 +1,24 @@
 <?php
 /*
-    Auteur      : Soares Flavio, De Castilho E Sousa Rodrigo
-    Description : Constantes pour la connexion à la base de données
+  Auteur      : Soares Flavio, De Castilho E Sousa Rodrigo
+  Description : Constantes pour la connexion à la base de données
 
-    Date        : 2021.09.15
-    Version     : 1.0
+  Date        : 2021.09.15
+  Version     : 1.0
 */
 
 // Méthode qui permet de créer une variable static pour la connexion à la base de données
-function getConnexion(){
+function getConnexion()
+{
   static $dbb = null;
-  try{
-    if($dbb === null)
-    {
-      $connectionString="mysql:host=".DB_HOST.";dbname=".DB_NAME.'';
+  try {
+    if ($dbb === null) {
+      $connectionString = "mysql:host=" . DB_HOST . ";dbname=" . DB_NAME . '';
       $dbb = new PDO($connectionString, DB_USER, DB_PASS);
       $dbb->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION);
     }
-  }
-  catch(PDOException $e)
-  {
-    die("Erreur : ".$e->getMEssage());
+  } catch (PDOException $e) {
+    die("Erreur : " . $e->getMEssage());
   }
   return $dbb;
 }

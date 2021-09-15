@@ -1,9 +1,13 @@
 <?php
 /*
- * Auteurs  : Lopes Miguel, Troller Fabian, Juling Guntram
- * Date    : 2018.11.06
- * Description : Code HTML cité des metiers
- */
+    Auteurs          : Lopes Miguel, Troller Fabian, Juling Guntram
+    Date             : 2018.11.06
+    Description      : Code HTML cité des metiers
+
+    Modifications    :
+    Auteurs          : Soares Flavio
+    Date             : 2021.09.15
+*/
 
 header("Cache-Control: no-cache, must-revalidate"); // HTTP/1.1
 header("Expires: Sat, 26 Jul 1997 05:00:00 GMT"); // Date dans le passé
@@ -19,7 +23,7 @@ header("Expires: Sat, 26 Jul 1997 05:00:00 GMT"); // Date dans le passé
 
     <script>var sol0 = "7"; var sol1 = "B";</script>
 
-    <script src="./binary.js?d=<?php echo date('hms', time()); ?>"></script>
+    <script src="./js/binary.js echo date('hms', time()); ?>"></script>
 </head>
 
 <body class="text-center" style="font-size: 2.5em;">

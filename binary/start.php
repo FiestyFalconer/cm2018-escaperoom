@@ -7,8 +7,8 @@ header('Content-Type: application/json');
   Description : data management
 */
 require("pdo.php");
-validEndStep();
-$result = "game finished";
+startNewGame();
+$result = "game started";
 $resultJSON = json_encode($result);
 
 print_r($resultJSON);
