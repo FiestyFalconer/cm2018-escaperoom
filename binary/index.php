@@ -23,7 +23,7 @@ header("Expires: Sat, 26 Jul 1997 05:00:00 GMT"); // Date dans le passé
 
     <script>var sol0 = "7"; var sol1 = "B";</script>
 
-    <script src="./js/binary.js echo date('hms', time()); ?>"></script>
+    <script src="js/binary.js echo date('hms', time()); ?>"></script>
 </head>
 
 <body class="text-center" style="font-size: 2.5em;">
