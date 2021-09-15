@@ -9,6 +9,6 @@
 
 // Constantes pour la connexion à la base de données
 DEFINE('DB_HOST', "127.0.0.1");
-DEFINE('DB_NAME', "escapegame");
-DEFINE('DB_USER', "root");
-DEFINE('DB_PASSWORD', "");
+DEFINE('DB_NAME', "escapegame_2021");
+DEFINE('DB_USER', "userEscape");
+DEFINE('DB_PASSWORD', "Super");

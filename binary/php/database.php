@@ -13,7 +13,6 @@ require_once("config.php");
  * Permet d'accéder à la base de données
  * retourne null si ne marche pas
  */
-
 function  getConnexion(){
     static $myDb = null;
     if($myDb === null){
