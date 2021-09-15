@@ -7,21 +7,8 @@
   Version     : 1.0
 */
 
-// Méthode qui permet de créer une variable static pour la connexion à la base de données
-function getConnexion()
-{
-  static $dbb = null;
-  try {
-    if ($dbb === null) {
-      $connectionString = "mysql:host=" . DB_HOST . ";dbname=" . DB_NAME . '';
-      $dbb = new PDO($connectionString, DB_USER, DB_PASS);
-      $dbb->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION);
-    }
-  } catch (PDOException $e) {
-    die("Erreur : " . $e->getMEssage());
-  }
-  return $dbb;
-}
+
+
 
 /*
 // Méthode qui permet de savoir le nombre de partie différente
