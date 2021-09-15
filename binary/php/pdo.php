@@ -1,4 +1,11 @@
 <?php
+/*
+    Auteur      : Soares Flavio, De Castilho E Sousa Rodrigo
+    Description : Constantes pour la connexion à la base de données
+
+    Date        : 2021.09.15
+    Version     : 1.0
+*/
 
 // Méthode qui permet de créer une variable static pour la connexion à la base de données
 function getConnexion(){
