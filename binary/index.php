@@ -5,9 +5,6 @@
  * Description : Code HTML cité des metiers
  */
 
-include("solution.php");
-$solution = getSolutionJSON();
-
 header("Cache-Control: no-cache, must-revalidate"); // HTTP/1.1
 header("Expires: Sat, 26 Jul 1997 05:00:00 GMT"); // Date dans le passé
 ?>
@@ -20,8 +17,8 @@ header("Expires: Sat, 26 Jul 1997 05:00:00 GMT"); // Date dans le passé
     <link rel="stylesheet" type="text/css" href="css/bootstrap.min.css">
     <meta name="viewport" content="width=device-width, initial-scale=1">
 
-    <script>var ADDR = JSON.parse('<?= json_encode(ADDR) ?>');
-        var solution = JSON.parse('<?= json_encode($solution) ?>');</script>
+    <script>var sol0 = "7"; var sol1 = "B";</script>
+
     <script src="./binary.js?d=<?php echo date('hms', time()); ?>"></script>
 </head>
 
