@@ -11,12 +11,12 @@ require_once "database.php";
 
 function getEnigmeCode(){
   try{
-    $today = date("Y-m-d");
+    $today = "2021-11-24";//date("Y-m-d");
 
     $query = getConnexion()->prepare("
-      SELECT `solution`.`en1`, `solution`.`en2`, `solution`.`en3`
-      FORM `escapegame_2021`.`solution`
-      WHERE ``solution`.`jour` = ?
+      SELECT `solution`.`en1`, `solution`.`en2`, `solution`.`en3` 
+      FROM `escapegame_2021`.`solution` 
+      WHERE `solution`.`jour` = ?
     ");
     $query->execute([$today]);
     return $query->fetchAll(PDO::FETCH_ASSOC);
