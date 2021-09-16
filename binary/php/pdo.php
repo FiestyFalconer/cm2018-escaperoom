@@ -11,7 +11,7 @@ require_once "database.php";
 
 function getEnigmeCode(){
   try{
-    $today = "2021-11-24";//date("Y-m-d");
+    $today = "2021-11-23";//date("Y-m-d");
 
     $query = getConnexion()->prepare("
       SELECT `solution`.`en1`, `solution`.`en2`, `solution`.`en3` 
