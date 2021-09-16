@@ -11,7 +11,7 @@
 const DEFAULT_CHAR = "_"; // caractere par defaut
 const LIMIT_BIN = 8; // taille limite de la liste binaire
 
-let checkServerInterval = setInterval(checkServer, 2000); // Appel la fonction checkServeur toutes le 2 secondes
+let checkVariablesInterval = setInterval(checkVariables, 2000); // Appel la fonction checkServeur toutes le 2 secondes
 
 // initialisation de la table des solutions binaires avec les caracteres par defaut
 var listBin = [
@@ -25,7 +25,7 @@ var listBin = [
   DEFAULT_CHAR
 ];
 
-function checkServer() {
+function checkVariables() {
   let solution1 = document.getElementById("sol1").innerHTML = sol1;
   let solution2 = document.getElementById("sol2").innerHTML = sol2;
 
