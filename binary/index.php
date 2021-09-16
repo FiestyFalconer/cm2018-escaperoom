@@ -5,7 +5,7 @@
     Description      : Code HTML cité des metiers
 
     Modifications    :
-    Auteurs          : Soares Flavio
+    Auteurs          : Soares Flavio, De Castilho E Sousa Rodrigo
     Date             : 2021.09.15
 */
 
@@ -14,9 +14,8 @@ header("Expires: Sat, 26 Jul 1997 05:00:00 GMT"); // Date dans le passé
 
 require_once "./php/pdo.php";
 
-var_dump(getEnigmeCode());
-
 $tableauCode = getEnigmeCode();
+var_dump($tableauCode);
 
 ?>
 <!DOCTYPE html>
@@ -28,7 +27,10 @@ $tableauCode = getEnigmeCode();
     <link rel="stylesheet" type="text/css" href="css/bootstrap.min.css">
     <meta name="viewport" content="width=device-width, initial-scale=1">
 
-    <script>var sol0 = <?=$tableauCode[0]['en1']?>; var sol1 = "<?=$tableauCode[0]['en2']?>";</script>
+    <script>
+        var sol0 = <?=$tableauCode[0]['en1']?>; // Enigme 1 
+        var sol1 = "<?=$tableauCode[0]['en2']?>"; // Enigme 2
+    </script>
 
     <script src="js/binary.js"></script>
 </head>
