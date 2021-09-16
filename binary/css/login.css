@@ -1,0 +1,31 @@
+/*
+Auteur  : Lopes Miguel, Troller Fabian, Juling Guntram
+Date    : 2018.11.06
+Description : Code javascript cité des metiers
+ */
+.btnContainer{
+    margin: auto;
+    display: flex;
+    flex-wrap: wrap;
+    width: 65vw;
+    justify-content: space-around;
+}
+
+.btnContainer input{
+    min-width: 15vw;
+    max-width: 15vw;
+
+    min-height: 10vh;
+    max-height: 10vh;
+
+    font-size: 4vh;
+    margin: 1rem;
+}
+h1{
+    text-align: center;
+    font-size: 12rem;
+}
+p{
+    text-align: center;
+    font-size: 16rem;
+}

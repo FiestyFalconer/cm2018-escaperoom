@@ -26,6 +26,8 @@ function getEnigmeCode(){
   }
 }
 
+
+
 /*
 // Méthode qui permet de savoir le nombre de partie différente
 function getNbGame(){
