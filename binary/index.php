@@ -16,6 +16,8 @@ require_once "./php/pdo.php";
 
 var_dump(getEnigmeCode());
 
+$tableauCode = getEnigmeCode();
+
 ?>
 <!DOCTYPE html>
 <html>
@@ -26,7 +28,7 @@ var_dump(getEnigmeCode());
     <link rel="stylesheet" type="text/css" href="css/bootstrap.min.css">
     <meta name="viewport" content="width=device-width, initial-scale=1">
 
-    <script>var sol0 = "7"; var sol1 = "B";</script>
+    <script>var sol0 = <?=$tableauCode[0]['en1']?>; var sol1 = "<?=$tableauCode[0]['en2']?>";</script>
 
     <script src="js/binary.js"></script>
 </head>
