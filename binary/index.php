@@ -14,10 +14,12 @@
 
 require_once "./php/pdo.php";
 
-$tableauCode = getEnigmeCode();
-$en1 = $tableauCode[0]['en1'];
-$en2 = $tableauCode[0]['en2'];
-var_dump($tableauCode);
+$tableauCode = getEnigmeCode(); // récupère les 3 énigmes de la db
+
+$en1 = $tableauCode[0]['en1']; // récupère l' énigmes 1 de la db
+$en2 = $tableauCode[0]['en2']; // récupère l' énigmes 2 de la db
+
+// var_dump($tableauCode);
 
 ?>
 <!DOCTYPE html>
@@ -30,8 +32,8 @@ var_dump($tableauCode);
     <meta name="viewport" content="width=device-width, initial-scale=1">
 
     <script>
-        var sol0 = <?=$en1?>; // Enigme 1 
-        var sol1 = "<?=$en2?>"; // Enigme 2
+        var sol1 = <?=$en1?>; // Enigme 1 
+        var sol2 = "<?=$en2?>"; // Enigme 2
     </script>
 
     <script src="js/binary.js"></script>
@@ -43,7 +45,7 @@ var_dump($tableauCode);
     <section class="col-xs-6">
         <div class="col-xs-6">
             <div class="row">
-                <span class="solutions" id="sol0">?</span>
+                <span class="solutions" id="sol1">?</span>
             </div>
             <div class="row">
                 <p style="font-size:18px;">
@@ -67,7 +69,7 @@ var_dump($tableauCode);
         </div>
         <div class="col-xs-6">
             <div class="row">
-                <span class="solutions" id="sol1">?</span>
+                <span class="solutions" id="sol2">?</span>
             </div>
             <div class="row">
                 <p style="font-size:18px;">
@@ -104,16 +106,16 @@ var_dump($tableauCode);
                 <div class="col-xs-6 col-xs-offset-3">
                     <div class="row">
                         <div class="col-xs-6">
-                            <input disabled value="0" type="Button" style="height: 100px" onclick="ListSetter(0)" id="B0" class="btn btn-lg btn-block btn-primary"/>
+                            <input disabled value="0" type="Button" style="height: 100px" onclick="ListSetter(0)" id="b0" class="btn btn-lg btn-block btn-primary"/>
                         </div>
                         <div class="col-xs-6">
-                            <input disabled value="1" type="Button" style="height: 100px" onclick="ListSetter(1)" id="B1" class="btn btn-lg btn-block btn-primary"/>
+                            <input disabled value="1" type="Button" style="height: 100px" onclick="ListSetter(1)" id="b1" class="btn btn-lg btn-block btn-primary"/>
                         </div>
                     </div>
                     <br>
                     <div class="row">
                         <div class="col-xs-12">
-                            <input disabled value="Effacer" type="Button" style="height: 50px" onclick="ResetArray()" id="B2" class="btn btn-lg btn-block btn-danger"/>
+                            <input disabled value="Effacer" type="Button" style="height: 50px" onclick="ResetArray()" id="b2" class="btn btn-lg btn-block btn-danger"/>
                         </div>
                     </div>
                 </div>

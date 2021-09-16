@@ -1,9 +1,19 @@
 /*
- * Auteur  : Lopes Miguel, Troller Fabian, Juling Guntram
- * Date    : 2018.11.06
- * Description : Code javascript cité des metiers
- */
+  Auteur  : Lopes Miguel, Troller Fabian, Juling Guntram
+  Date    : 2018.11.06
+  Description : Code javascript cité des metiers
+ 
+  Modifications  :
+  Auteurs        : Soares Flavio, De Castilho E Sousa Rodrigo
+  Date           : 2021.09.16
+*/
+
 const DEFAULT_CHAR = "_"; // caractere par defaut
+const LIMIT_BIN = 8; // taille limite de la liste binaire
+
+let checkServerInterval = setInterval(checkServer, 2000); // Appel la fonction checkServeur toutes le 2 secondes
+
+// initialisation de la table des solutions binaires avec les caracteres par defaut
 var listBin = [
   DEFAULT_CHAR,
   DEFAULT_CHAR,
@@ -13,11 +23,18 @@ var listBin = [
   DEFAULT_CHAR,
   DEFAULT_CHAR,
   DEFAULT_CHAR
-]; // initialisation de la table des solutions binaires avec les caracteres par defaut
-const LIMIT_BIN = 8; // taille limite de la liste binaire
+];
 
-let checkServerInterval = setInterval(checkServer, 2000);
-let checkNewGameInterval = null;
+function checkServer() {
+  let solution1 = document.getElementById("sol1").innerHTML = sol1;
+  let solution2 = document.getElementById("sol2").innerHTML = sol2;
+
+  // met les 3 buttons (0; 1; Effacer) en Enable
+  let btn0 = document.getElementById("b0").removeAttribute("disabled");
+  let btn1 = document.getElementById("b1").removeAttribute("disabled");
+  let btn2 = document.getElementById("b2").removeAttribute("disabled");
+}
+
 // Permet d'inserer la valeur dans la liste en decalant la liste
 function ListSetter(value) {
   listBin.push(value);
@@ -69,8 +86,8 @@ function UpdateView(listBin) {
   }
   // si la valeur calculee correspond a la valeur attendue
   if (
-    hex[0] == document.getElementById("sol0").innerHTML &&
-    hex[1] == document.getElementById("sol1").innerHTML
+    hex[0] == document.getElementById("sol1").innerHTML &&
+    hex[1] == document.getElementById("sol2").innerHTML
   ) {
     Win();
   }
@@ -78,18 +95,6 @@ function UpdateView(listBin) {
 
 // Finis la partie
 function Win() {
-
-}
-
-function checkServer() {
-  document.getElementById("sol0").innerHTML = sol0;
-  document.getElementById("sol1").innerHTML = sol1;
-
-  document.getElementById("B0").removeAttribute("disabled");
-  document.getElementById("B1").removeAttribute("disabled");
-  document.getElementById("B2").removeAttribute("disabled");
-}
-
-function checkNewGame() {
-
+  let endGame = document.getElementById("endgame").removeAttribute("hidden"); // Enleve l'attribut hidden pour afficher l'image de fin de partie
+  let game = document.getElementById("game").hidden = true; // Cache le jeu
 }
