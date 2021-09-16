@@ -9,12 +9,14 @@
     Date             : 2021.09.15
 */
 
-header("Cache-Control: no-cache, must-revalidate"); // HTTP/1.1
-header("Expires: Sat, 26 Jul 1997 05:00:00 GMT"); // Date dans le passé
+//header("Cache-Control: no-cache, must-revalidate"); // HTTP/1.1
+//header("Expires: Sat, 26 Jul 1997 05:00:00 GMT"); // Date dans le passé
 
 require_once "./php/pdo.php";
 
 $tableauCode = getEnigmeCode();
+$en1 = $tableauCode[0]['en1'];
+$en2 = $tableauCode[0]['en2'];
 var_dump($tableauCode);
 
 ?>
@@ -28,8 +30,8 @@ var_dump($tableauCode);
     <meta name="viewport" content="width=device-width, initial-scale=1">
 
     <script>
-        var sol0 = <?=$tableauCode[0]['en1']?>; // Enigme 1 
-        var sol1 = "<?=$tableauCode[0]['en2']?>"; // Enigme 2
+        var sol0 = <?=$en1?>; // Enigme 1 
+        var sol1 = "<?=$en2?>"; // Enigme 2
     </script>
 
     <script src="js/binary.js"></script>
