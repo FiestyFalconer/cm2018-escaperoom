@@ -4,22 +4,21 @@ function affichageButtons()
     $chaine = '<div class="btnContainer">';
 
     for ($i = 0; $i < 10; $i++) {
-        $chaine .= "<input value=\"$i\" type=\"Button\" onclick=\"\" id=\"$i\" class=\"btn btn-lg btn-primary\" />";
+        $chaine .= "<input value=\"$i\" type=\"Button\" onclick=\"btnClick($i)\" id=\"$i\" class=\"btn btn-lg btn-primary\" />";
     }
     $chaine .= '
-            <input value="A" type="Button" onclick="" id="A" class="btn btn-lg btn-primary" />
-            <input value="B" type="Button" onclick="" id="B" class="btn btn-lg btn-primary" />
-            <input value="C" type="Button" onclick="" id="C" class="btn btn-lg btn-primary" />
-            <input value="D" type="Button" onclick="" id="D" class="btn btn-lg btn-primary" />
-            <input value="E" type="Button" onclick="" id="E" class="btn btn-lg btn-primary" />
-            <input value="F" type="Button" onclick="" id="F" class="btn btn-lg btn-primary" />
+            <input value="A" type="Button" onclick="btnClick("A")" id="A" class="btn btn-lg btn-primary"/>
+            <input value="B" type="Button" onclick="btnClick("B")" id="B" class="btn btn-lg btn-primary"/>
+            <input value="C" type="Button" onclick="btnClick("C")" id="C" class="btn btn-lg btn-primary"/>
+            <input value="D" type="Button" onclick="btnClick("D")" id="D" class="btn btn-lg btn-primary"/>
+            <input value="E" type="Button" onclick="btnClick("E")" id="E" class="btn btn-lg btn-primary"/>
+            <input value="F" type="Button" onclick="btnClick("F")" id="F" class="btn btn-lg btn-primary"/>
     ';
     return $chaine;
 }
 ?>
 <!DOCTYPE html>
 <html lang="en">
-
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
@@ -28,6 +27,8 @@ function affichageButtons()
     
     <link rel="stylesheet" type="text/css" href="css/bootstrap.min.css">
     <link rel="stylesheet" type="text/css" href="css/login.css">
+
+    <script src="js/binary.js"></script>
 </head>
 
 <body>
@@ -41,5 +42,4 @@ function affichageButtons()
         <?= affichageButtons() ?>
     </div>
 </body>
-
 </html>
