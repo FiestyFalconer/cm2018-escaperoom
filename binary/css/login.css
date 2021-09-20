@@ -1,31 +1,39 @@
 /*
-Auteur  : Lopes Miguel, Troller Fabian, Juling Guntram
-Date    : 2018.11.06
-Description : Code javascript cité des metiers
- */
+    Auteur  : Soares Flavio, Rodrigo De Castilho E Sousa
+    Date    : 2021.09.16
+*/
+
+*{
+    margin: 0;
+    padding: 0;
+}
+
 .btnContainer{
     margin: auto;
     display: flex;
     flex-wrap: wrap;
-    width: 65vw;
+    width: 60vw;
     justify-content: space-around;
 }
 
 .btnContainer input{
-    min-width: 15vw;
-    max-width: 15vw;
+    min-width: 12vw;
+    max-width: 14vw;
 
-    min-height: 10vh;
-    max-height: 10vh;
+    min-height: 6vh;
+    max-height: 8vh;
 
     font-size: 4vh;
-    margin: 1rem;
+    margin: 0.5rem;
 }
+
 h1{
     text-align: center;
-    font-size: 12rem;
+    font-size: 5vw;
+    font-family: fantasy;
 }
+
 p{
     text-align: center;
-    font-size: 16rem;
+    font-size: 12vw;
 }
