@@ -6,7 +6,7 @@ function affichageButtons()
     for ($i = 0; $i <= 15; $i++)
     {
         $hexa = strtoupper(dechex($i));
-        $chaine .= "<input value=\"$hexa\" type=\"Button\" onclick=\"btnClick($hexa)\" id=\"$hexa\" class=\"btn btn-primary\" />";
+        $chaine .= "<input value=\"$hexa\" type=\"Button\" onclick=\"btnClick('$hexa')\" id=\"$hexa\" class=\"btn btn-primary\" />\n";
     }
     return $chaine;
 }

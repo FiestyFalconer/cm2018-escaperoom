@@ -11,13 +11,7 @@
 const DEFAULT_CHAR = "_"; // caractere par defaut
 const LIMIT_BIN = 8; // taille limite de la liste binaire
 
-let boolTouche = true; // bool pour voir si on a deja taper 2 fois
-let nbTouche = 0; // nombre de fois qu'on a taper
-
-let nb1 = "";
-let nb2 = "";
-
-let checkVariablesInterval = setInterval(checkVariables, 2000); // Appel la fonction checkServeur toutes le 2 secondes
+//let checkVariablesInterval = setInterval(checkVariables, 2000); // Appel la fonction checkServeur toutes le 2 secondes
 
 // initialisation de la table des solutions binaires avec les caracteres par defaut
 var listBin = [
@@ -30,26 +24,6 @@ var listBin = [
   DEFAULT_CHAR,
   DEFAULT_CHAR
 ];
-
-function btnClick(nbLettre){
-
-  if(nbTouche == 0){
-    nb1 = nbLettre;
-    nbTouche += 1;
-  }
-  else if(nbTouche == 1){
-    nb2 = nbLettre;
-    nbTouche += 1;
-  }
-}
-
-function effacerlogin(){
-
-}
-
-function affichageLogin(){
-
-}
 
 function checkVariables() {
   let solution1 = document.getElementById("sol1").innerHTML = sol1;
