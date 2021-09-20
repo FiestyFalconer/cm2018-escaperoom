@@ -5,7 +5,7 @@ function affichageButtons()
 
     for ($i = 0; $i <= 15; $i++)
     {
-        $hexa = strtoupper(dechex($i));
+        $hexa = strtoupper(dechex($i)); // Converti les nombres décimal en hexadécimal et les met en majuscules (lettres)
         $chaine .= "<input value=\"$hexa\" type=\"Button\" onclick=\"btnClick($hexa)\" id=\"$hexa\" class=\"btn btn-primary\" />";
     }
     return $chaine;
@@ -26,8 +26,8 @@ function affichageButtons()
 </head>
 
 <body>
-    <h1>Saisissez le code secret</h1>
-    <p>
+    <h1 class="text-primary">Saisissez le code secret</h1>
+    <p class="text-primary">
         <span id="valueEn1">_</span>
         &nbsp;
         <span id="valueEn2">_</span>

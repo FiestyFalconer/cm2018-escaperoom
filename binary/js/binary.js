@@ -111,10 +111,8 @@ function UpdateView(listBin) {
     document.getElementById("hex" + i).innerHTML = hex[i];
   }
   // si la valeur calculee correspond a la valeur attendue
-  if (
-    hex[0] == document.getElementById("sol1").innerHTML &&
-    hex[1] == document.getElementById("sol2").innerHTML
-  ) {
+  if (hex[0] == document.getElementById("sol1").innerHTML && hex[1] == document.getElementById("sol2").innerHTML)
+  {
     Win();
   }
 }
