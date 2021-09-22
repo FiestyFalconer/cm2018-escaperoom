@@ -10,7 +10,8 @@ let nbTouche = 0; // nombre de fois qu'on a taper
 let nb1 = "";
 let nb2 = "";
 
-
+let time = 5000;
+const NBTIME = 5000;
 
 function btnClick(nbLettre){
     let nbAffichage1 = document.getElementById("valueEn1");
@@ -38,8 +39,12 @@ function btnClick(nbLettre){
         document.location.href="http://git/cm2018-escaperoom/binary/index.php"; 
     }
     else{
+
         travelListButtons(true);
-        setTimeout(deleteNbLogin,2000);
+        
+        console.log(time);
+        setTimeout(deleteNbLogin,time);
+        time += NBTIME;
     }
   }
   

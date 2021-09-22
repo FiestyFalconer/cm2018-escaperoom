@@ -9,9 +9,9 @@
 */
 
 const DEFAULT_CHAR = "_"; // caractere par defaut
-const LIMIT_BIN = 8; // taille limite de la liste binaire
+const LIMIT_BIN = 8; // taille limite de la liste binaire 
 
-let checkVariablesInterval = setInterval(checkVariables, 1000); // Appel la fonction checkServeur toutes le 2 secondes
+let checkVariablesInterval = setTimeout(checkVariables, 1000); // Appel la fonction checkServeur toutes le 2 secondes
 
 // initialisation de la table des solutions binaires avec les caracteres par defaut
 var listBin = [
@@ -57,7 +57,7 @@ function ResetArray() {
 function UpdateView(listBin) {
   var bin = "";
   var hex = [];
-
+console.log(listBin);
   // remplace les caracteres par defaut par des 0
   for (var i = 0; i < listBin.length; i++) {
     if (listBin[i] == "_") {
