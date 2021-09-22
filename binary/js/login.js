@@ -1,11 +1,7 @@
-/*
-  Auteur  : Lopes Miguel, Troller Fabian, Juling Guntram
-  Date    : 2018.11.06
-  Description : Code javascript cité des metiers
- 
-  Modifications  :
+/*s
   Auteurs        : Soares Flavio, De Castilho E Sousa Rodrigo
   Date           : 2021.09.16
+  version        : 1.0.0.0
 */
 
 let boolTouche = false; // bool pour voir si on a deja taper 2 fois
@@ -13,6 +9,8 @@ let nbTouche = 0; // nombre de fois qu'on a taper
 
 let nb1 = "";
 let nb2 = "";
+
+
 
 function btnClick(nbLettre){
     let nbAffichage1 = document.getElementById("valueEn1");
@@ -40,7 +38,8 @@ function btnClick(nbLettre){
         document.location.href="http://git/cm2018-escaperoom/binary/index.php"; 
     }
     else{
-        setInterval(deleteNbLogin,2000);
+        travelListButtons(true);
+        setTimeout(deleteNbLogin,2000);
     }
   }
   
@@ -53,4 +52,13 @@ function btnClick(nbLettre){
     nb2 = "";
     nbTouche = 0;
     boolTouche = false;
+    travelListButtons(false);
   }
+
+  function travelListButtons(boolButtons){
+    let btnButtons = document.getElementsByTagName("input");
+    for(let i = 0; i<16; i++){
+      let hexa = i.toString(16).toUpperCase();
+      btnButtons[hexa].disabled = boolButtons;
+    }   
+  } 
