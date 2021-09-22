@@ -13,6 +13,10 @@ let nb2 = "";
 let time = 5000;
 const NBTIME = 5000;
 
+sessionStorage.setItem("boolLogin", false);
+
+sessionStorage.setItem("time",5000);
+
 function btnClick(nbLettre){
     let nbAffichage1 = document.getElementById("valueEn1");
     let nbAffichage2 = document.getElementById("valueEn2");
@@ -36,15 +40,23 @@ function btnClick(nbLettre){
   
   function verificationLogin(nb1,nb2){
     if(nb1 == String(sol1) && nb2 == String(sol2)){
+        sessionStorage.setItem("boolLogin", true);
         document.location.href="http://git/cm2018-escaperoom/binary/index.php"; 
     }
     else{
 
         travelListButtons(true);
         
-        console.log(time);
-        setTimeout(deleteNbLogin,time);
-        time += NBTIME;
+        let timeSession = sessionStorage.getItem('time')
+
+        console.log(timeSession);
+        setTimeout(deleteNbLogin,timeSession);
+        
+        timeSession = parseInt(timeSession);
+        
+        timeSession += NBTIME;
+
+        sessionStorage.setItem("time",timeSession);
     }
   }
   

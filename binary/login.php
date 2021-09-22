@@ -1,5 +1,4 @@
 <?php
-
 require_once "./php/pdo.php";
 
 $tableauCode = getEnigmeCode(); // récupère les 3 énigmes de la db

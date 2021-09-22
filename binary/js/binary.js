@@ -25,6 +25,12 @@ var listBin = [
   DEFAULT_CHAR
 ];
 
+let boolSession = sessionStorage.getItem("boolLogin");
+
+if(boolSession == "false"){
+  document.location.href="http://git/cm2018-escaperoom/binary/login.php"; 
+}
+
 function checkVariables() {
   let solution1 = document.getElementById("sol1").innerHTML = sol1;
   let solution2 = document.getElementById("sol2").innerHTML = sol2;
