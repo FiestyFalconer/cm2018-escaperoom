@@ -13,8 +13,8 @@ function affichageButtons()
 
     for ($i = 0; $i <= 15; $i++)
     {
-        $hexa = strtoupper(dechex($i));
-        $chaine .= "<input value=\"$hexa\" type=\"Button\" onclick=\"btnClick('$hexa')\" id=\"$hexa\" class=\"buttons btn btn-primary\" />\n";
+        $hexa = strtoupper(dechex($i)); // Converti les nombres décimal en hexadécimal et les met en majuscules (lettres)
+        $chaine .= "<input value=\"$hexa\" type=\"Button\" onclick=\"btnClick($hexa)\" id=\"$hexa\" class=\"btn btn-primary\" />";
     }
     return $chaine;
 }

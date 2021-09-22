@@ -19,8 +19,6 @@ $tableauCode = getEnigmeCode(); // récupère les 3 énigmes de la db
 $en1 = $tableauCode[0]['en1']; // récupère l' énigmes 1 de la db
 $en2 = $tableauCode[0]['en2']; // récupère l' énigmes 2 de la db
 
-// var_dump($tableauCode);
-
 ?>
 <!DOCTYPE html>
 <html>
@@ -32,8 +30,8 @@ $en2 = $tableauCode[0]['en2']; // récupère l' énigmes 2 de la db
     <meta name="viewport" content="width=device-width, initial-scale=1">
 
     <script>
-        var sol1 = <?=$en1?>; // Enigme 1 
-        var sol2 = "<?=$en2?>"; // Enigme 2
+        let sol1 = "<?=$en1?>"; // Enigme 1 
+        let sol2 = "<?=$en2?>"; // Enigme 2
     </script>
 
     <script src="js/binary.js"></script>
