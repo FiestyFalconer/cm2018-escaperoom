@@ -32,7 +32,7 @@ function affichageButtons()
 
     <script src="js/login.js"></script>
     <script>
-        var sol1 = <?=$en1?>; // Enigme 1 
+        var sol1 = "<?=$en1?>"; // Enigme 1 
         var sol2 = "<?=$en2?>"; // Enigme 2
     </script>
 </head>
