@@ -1,12 +1,21 @@
 <?php
+/*
+    Auteur      : Soares Flavio, De Castilho E Sousa Rodrigo
+    Description : Connexion à la base de données
+
+    Date        : 2021.09.15
+    Version     : 1.0
+*/
+
 require_once "./php/pdo.php";
 
-$tableauCode = getEnigmeCode(); // récupère les 3 énigmes de la db
+$tableauCode = getEnigmeCode(); // récupère les codes 3 énigmes de la db
 
-$en1 = $tableauCode[0]['en1']; // récupère l' énigmes 1 de la db
-$en2 = $tableauCode[0]['en2']; // récupère l' énigmes 2 de la db
+$en1 = $tableauCode[0]['en1']; // récupère le code de l'énigmes 1 de la db
+$en2 = $tableauCode[0]['en2']; // récupère le code de l' énigmes 2 de la db
 
-function affichageButtons()
+//afficher les boutons
+function showButtons()
 {
     $chaine = '<div class="btnContainer">';
 
@@ -44,7 +53,7 @@ function affichageButtons()
         <span id="valueEn2">_</span>
     </p>
     <div>
-        <?= affichageButtons() ?>
+        <?= showButtons() ?>
     </div>
 </body>
 </html>

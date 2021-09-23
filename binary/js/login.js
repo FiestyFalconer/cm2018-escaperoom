@@ -7,20 +7,21 @@
 let boolTouche = false; // bool pour voir si on a deja taper 2 fois
 let nbTouche = 0; // nombre de fois qu'on a taper
 
-let nb1 = "";
-let nb2 = "";
+let nb1 = ""; //premier nombre choisi
+let nb2 = ""; //deuxiemme nombre choisi
 
-let time = 5000;
-const NBTIME = 5000;
+let time = 5000; //nombre de secondes a attendre
+const NBTIME = 5000; //nombre de secondes que vont augmnter
 
 sessionStorage.setItem("boolLogin", false);
 
 sessionStorage.setItem("time",5000);
 
+//afficher les nombres dans les "_"
 function btnClick(nbLettre){
     let nbAffichage1 = document.getElementById("valueEn1");
     let nbAffichage2 = document.getElementById("valueEn2");
-
+    //savoir si on a deja cliquer une fois
     if(nbTouche == 0){
       nb1 = nbLettre;
       nbTouche += 1;
@@ -32,34 +33,36 @@ function btnClick(nbLettre){
       nbAffichage2.innerHTML = nb2;
       boolTouche = true;
     }
-
+    //savoir si on a trouver le code
     if(boolTouche){
         verificationLogin(nb1,nb2)
     }
   }
-  
+  //verification si on a bien trouver le code
   function verificationLogin(nb1,nb2){
     if(nb1 == String(sol1) && nb2 == String(sol2)){
         sessionStorage.setItem("boolLogin", true);
-        document.location.href="http://git/cm2018-escaperoom/binary/index.php"; 
+        document.location.href="http://git/cm2018-escaperoom/binary/index.php"; //aller dans la page d'accuille
     }
     else{
 
         travelListButtons(true);
         
-        let timeSession = sessionStorage.getItem('time')
+        /*augmenter les secondes a chaque fois qu'on fait un erreur*/
+        let timeSession = sessionStorage.getItem('time')// session pour garder les secondes d'attends
 
-        console.log(timeSession);
-        setTimeout(deleteNbLogin,timeSession);
+        console.log(timeSession);//afficher
+
+        setTimeout(deleteNbLogin,timeSession);//appeller une fois la fonction 
         
         timeSession = parseInt(timeSession);
         
-        timeSession += NBTIME;
+        timeSession += NBTIME;// augmenter les secondes
 
-        sessionStorage.setItem("time",timeSession);
+        sessionStorage.setItem("time",timeSession);// garder le nombre de secondes dans la session
     }
   }
-  
+  //suprimer les donnees des variables et enlever le disabled des boutons
   function deleteNbLogin(){
     let nbAffichage1 = document.getElementById("valueEn1");
     let nbAffichage2 = document.getElementById("valueEn2");
@@ -71,11 +74,11 @@ function btnClick(nbLettre){
     boolTouche = false;
     travelListButtons(false);
   }
-
+  //mettre les boutons en "disabled"
   function travelListButtons(boolButtons){
     let btnButtons = document.getElementsByTagName("input");
     for(let i = 0; i<16; i++){
-      let hexa = i.toString(16).toUpperCase();
+      let hexa = i.toString(16).toUpperCase();//Converti les nombres décimal en hexadécimal et les met en majuscules (lettres)
       btnButtons[hexa].disabled = boolButtons;
     }   
   } 

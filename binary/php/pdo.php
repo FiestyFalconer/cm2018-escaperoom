@@ -9,6 +9,7 @@
 
 require_once "database.php";
 
+//avoir les donnees de la base de donnee
 function getEnigmeCode(){
   try{
     $today = "2021-11-23";//date("Y-m-d");
