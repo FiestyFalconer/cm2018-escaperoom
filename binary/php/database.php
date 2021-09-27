@@ -3,15 +3,13 @@
     Auteur      : Soares Flavio, De Castilho E Sousa Rodrigo
     Description : Connexion à la base de données
 
-    Date        : 2021.09.15
+    Date        : 09.2021
     Version     : 1.0
 */
 
 require_once("config.php");
 
-/*
- * Permet d'accéder à la base de données
- */
+// Permet d'accéder à la base de données
 function  getConnexion(){
     static $myDb = null;
     if($myDb === null){

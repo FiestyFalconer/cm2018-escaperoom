@@ -1,19 +1,19 @@
 /*
-  Auteur  : Lopes Miguel, Troller Fabian, Juling Guntram
-  Date    : 2018.11.06
-  Description : Code javascript cité des metiers
+  Auteur         : Lopes Miguel, Troller Fabian, Juling Guntram
+  Date           : 2018.11.06
+  Description    : Code javascript cité des metiers
  
   Modifications  :
   Auteurs        : Soares Flavio, De Castilho E Sousa Rodrigo
-  Date           : 2021.09.16
+  Date           : 09.2021
 */
 
-const DEFAULT_CHAR = "_"; // caractere par defaut
-const LIMIT_BIN = 8; // taille limite de la liste binaire 
+const DEFAULT_CHAR = "_"; // Caractère par defaut
+const LIMIT_BIN = 8; // Taille limite de la liste binaire 
 
-let checkVariablesInterval = setTimeout(checkVariables, 1000); // Appel la fonction checkServeur toutes le 2 secondes
+let checkVariablesInterval = setTimeout(checkVariables, 1000); // Appel la fonction checkVariables toutes le 1 secondes
 
-// initialisation de la table des solutions binaires avec les caracteres par defaut
+// Initialisation de la table des solutions binaires avec les caracteres par defaut
 var listBin = [
   DEFAULT_CHAR,
   DEFAULT_CHAR,
@@ -25,12 +25,14 @@ var listBin = [
   DEFAULT_CHAR
 ];
 
-let boolSession = sessionStorage.getItem("boolLogin");
+let session = sessionStorage.getItem("login"); // Session
 
-if(boolSession == "false"){
+// Redirige l'utilisateur vers la page login.php si il n'est pas connecté
+if(session == "false"){
   document.location.href="http://git/cm2018-escaperoom/binary/login.php"; 
 }
 
+// Vérifie les variables
 function checkVariables() {
   let solution1 = document.getElementById("sol1").innerHTML = sol1;
   let solution2 = document.getElementById("sol2").innerHTML = sol2;

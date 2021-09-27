@@ -19,8 +19,8 @@ if(!sessionStorage.getItem("time")){
   sessionStorage.setItem("time",5000);
 }
 
-if(!sessionStorage.getItem("boolLogin")){
-  sessionStorage.setItem("boolLogin", false);
+if(!sessionStorage.getItem("login")){
+  sessionStorage.setItem("login", false);
 }
 
 //afficher les nombres dans les "_"
@@ -48,19 +48,19 @@ function btnClick(nbLettre) {
 //verification si on a bien trouver le code
 function verificationLogin(nb1, nb2) {
   if (nb1 == String(sol1) && nb2 == String(sol2)) {
-    sessionStorage.setItem("boolLogin", true);
+    sessionStorage.setItem("login", true);
     document.location.href = "http://git/cm2018-escaperoom/binary/index.php"; //aller dans la page d'accuille
   }
   else {
 
     travelListButtons(true);
 
-    /*augmenter les secondes a chaque fois qu'on fait un erreur*/
-    let timeSession = sessionStorage.getItem('time')// session pour garder les secondes d'attends
+    // augmenter les secondes a chaque fois qu'on fait un erreur
+    let timeSession = sessionStorage.getItem('time') // session pour garder les secondes d'attends
 
-    console.log(timeSession);//afficher
+    console.log(timeSession); // Afficher
 
-    setTimeout(deleteNbLogin, timeSession);//appeller une fois la fonction 
+    setTimeout(deleteNbLogin, timeSession); //Appeller une fois la fonction 
 
     timeSession = parseInt(timeSession);
 
