@@ -18,8 +18,9 @@ if(!sessionStorage.getItem("time")){
   sessionStorage.setItem("time",5000);
 }
 
+sessionStorage.setItem("login", false);
 if(!sessionStorage.getItem("login")){
-  sessionStorage.setItem("login", false);
+
 }
 
 //afficher les nombres dans les "_"
