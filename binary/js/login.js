@@ -13,9 +13,13 @@ let nb2 = ""; //deuxiemme nombre choisi
 let time = 5000; //nombre de secondes a attendre
 const NBTIME = 5000; //nombre de secondes que vont augmnter
 
-sessionStorage.setItem("boolLogin", false);
+if(!sessionStorage.getItem("time")){
+  sessionStorage.setItem("time",5000);
+}
 
-sessionStorage.setItem("time",5000);
+if(!sessionStorage.getItem("boolLogin")){
+  sessionStorage.setItem("boolLogin", false);
+}
 
 //afficher les nombres dans les "_"
 function btnClick(nbLettre){
