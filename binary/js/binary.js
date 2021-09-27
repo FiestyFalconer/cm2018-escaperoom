@@ -29,7 +29,12 @@ let session = sessionStorage.getItem("login"); // Session
 
 // Redirige l'utilisateur vers la page login.php si il n'est pas connecté
 if(session == "false"){
-  document.location.href="http://git/cm2018-escaperoom/binary/login.php"; 
+  goToLogin();
+}
+
+// Redirige l'utilisateur vers la page login.php
+function goToLogin(){
+  document.location.href="http://git/cm2018-escaperoom/binary/login.php";
 }
 
 // Vérifie les variables
@@ -37,7 +42,7 @@ function checkVariables() {
   let solution1 = document.getElementById("sol1").innerHTML = sol1;
   let solution2 = document.getElementById("sol2").innerHTML = sol2;
 
-  // met les 3 buttons (0; 1; Effacer) en Enable
+  // Met les 3 buttons (0; 1; Effacer) en Enable
   let btn0 = document.getElementById("b0").removeAttribute("disabled");
   let btn1 = document.getElementById("b1").removeAttribute("disabled");
   let btn2 = document.getElementById("b2").removeAttribute("disabled");
@@ -66,7 +71,7 @@ function UpdateView(listBin) {
   var bin = "";
   var hex = [];
 console.log(listBin);
-  // remplace les caracteres par defaut par des 0
+  // Remplace les caracteres par defaut par des 0
   for (var i = 0; i < listBin.length; i++) {
     if (listBin[i] == "_") {
       bin += "0";
@@ -75,12 +80,12 @@ console.log(listBin);
     }
   }
 
-  // affichage binaire
+  // Affichage binaire
   for (var i = 0; i < listBin.length; i++) {
     document.getElementById("value" + i).innerHTML = listBin[i];
   }
 
-  // calcul de l'hexadecimal
+  // Calcul de l'hexadecimal
   hex[0] = parseInt(bin.substring(0, 4), 2)
     .toString(16)
     .toUpperCase();
@@ -88,11 +93,11 @@ console.log(listBin);
     .toString(16)
     .toUpperCase();
 
-  // afiichage hexadecimal
+  // Afiichage hexadecimal
   for (var i = 0; i < hex.length; i++) {
     document.getElementById("hex" + i).innerHTML = hex[i];
   }
-  // si la valeur calculee correspond a la valeur attendue
+  // Si la valeur calculee correspond a la valeur attendue
   if (hex[0] == document.getElementById("sol1").innerHTML && hex[1] == document.getElementById("sol2").innerHTML)
   {
     Win();
@@ -104,4 +109,5 @@ function Win() {
   let endGame = document.getElementById("endgame").removeAttribute("hidden"); // Enleve l'attribut hidden pour afficher l'image de fin de partie
   let game = document.getElementById("game").hidden = true; // Cache le jeu
   sessionStorage.setItem("time",5000);
+  setTimeout(goToLogin,30000);
 }
