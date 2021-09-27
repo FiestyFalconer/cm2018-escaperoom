@@ -2,15 +2,12 @@
 /*
     Auteurs          : Lopes Miguel, Troller Fabian, Juling Guntram
     Date             : 2018.11.06
-    Description      : Code HTML cité des metiers
+    Description      : Enigme 3 escape game
 
     Modifications    :
     Auteurs          : Soares Flavio, De Castilho E Sousa Rodrigo
-    Date             : 2021.09.15
+    Date             : 09.2021
 */
-
-//header("Cache-Control: no-cache, must-revalidate"); // HTTP/1.1
-//header("Expires: Sat, 26 Jul 1997 05:00:00 GMT"); // Date dans le passé
 
 require_once "./php/pdo.php";
 
