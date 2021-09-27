@@ -103,4 +103,5 @@ console.log(listBin);
 function Win() {
   let endGame = document.getElementById("endgame").removeAttribute("hidden"); // Enleve l'attribut hidden pour afficher l'image de fin de partie
   let game = document.getElementById("game").hidden = true; // Cache le jeu
+  sessionStorage.setItem("time",5000);
 }
