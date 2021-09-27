@@ -12,7 +12,6 @@ let nbPresser = 0; // Nombre de fois qu'on a pressé un button
 let nb1 = ""; // Premier nombre (lors du clique)
 let nb2 = ""; // Deuxiemme nombre (lors dz clique)
 
-let time = 5000; // Nombre de secondes de penalité
 const NBTIME = 5000; // Nombre de secondes augmenté à chaque movaise tentative
 
 if(!sessionStorage.getItem("time")){
