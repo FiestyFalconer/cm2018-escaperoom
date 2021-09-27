@@ -3,7 +3,7 @@
     Auteur      : Soares Flavio, De Castilho E Sousa Rodrigo
     Description : Constantes pour la connexion à la base de données
 
-    Date        : 2021.09.15
+    Date        : 09.2021
     Version     : 1.0
 */
 

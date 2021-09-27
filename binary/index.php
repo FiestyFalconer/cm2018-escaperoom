@@ -11,10 +11,10 @@
 
 require_once "./php/pdo.php";
 
-$tableauCode = getEnigmeCode(); // récupère les 3 énigmes de la db
+$tableauCode = getEnigmeCode(); // Récupère les 3 énigmes de la db
 
-$en1 = $tableauCode[0]['en1']; // récupère l' énigmes 1 de la db
-$en2 = $tableauCode[0]['en2']; // récupère l' énigmes 2 de la db
+$en1 = $tableauCode[0]['en1']; // Récupère l' énigmes 1 de la db
+$en2 = $tableauCode[0]['en2']; // Récupère l' énigmes 2 de la db
 
 ?>
 <!DOCTYPE html>
