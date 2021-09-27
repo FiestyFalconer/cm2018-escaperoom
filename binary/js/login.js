@@ -15,9 +15,13 @@ let nb2 = ""; // Deuxiemme nombre (lors dz clique)
 let time = 5000; // Nombre de secondes de penalité
 const NBTIME = 5000; // Nombre de secondes augmenté à chaque movaise tentative
 
-sessionStorage.setItem("boolLogin", false); // Ajoute dans la session une variable qui permet de savoir si l'utilisateur est connecté
+if(!sessionStorage.getItem("time")){
+  sessionStorage.setItem("time",5000);
+}
 
-// sessionStorage.setItem("time", 5000); // Ajoute dans la session une variable qui permet de garder la valeur de la penalité
+if(!sessionStorage.getItem("boolLogin")){
+  sessionStorage.setItem("boolLogin", false);
+}
 
 //afficher les nombres dans les "_"
 function btnClick(nbLettre) {
