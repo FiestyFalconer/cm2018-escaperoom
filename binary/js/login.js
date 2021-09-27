@@ -19,9 +19,6 @@ if(!sessionStorage.getItem("time")){
 }
 
 sessionStorage.setItem("login", false);
-if(!sessionStorage.getItem("login")){
-
-}
 
 //afficher les nombres dans les "_"
 function btnClick(nbLettre) {
