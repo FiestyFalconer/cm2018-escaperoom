@@ -70,7 +70,9 @@ function ResetArray() {
 function UpdateView(listBin) {
   var bin = "";
   var hex = [];
-console.log(listBin);
+
+  console.log(listBin);
+
   // Remplace les caracteres par defaut par des 0
   for (var i = 0; i < listBin.length; i++) {
     if (listBin[i] == "_") {
@@ -86,17 +88,14 @@ console.log(listBin);
   }
 
   // Calcul de l'hexadecimal
-  hex[0] = parseInt(bin.substring(0, 4), 2)
-    .toString(16)
-    .toUpperCase();
-  hex[1] = parseInt(bin.substring(4), 2)
-    .toString(16)
-    .toUpperCase();
+  hex[0] = parseInt(bin.substring(0, 4), 2).toString(16).toUpperCase();
+  hex[1] = parseInt(bin.substring(4), 2).toString(16).toUpperCase();
 
   // Afiichage hexadecimal
   for (var i = 0; i < hex.length; i++) {
     document.getElementById("hex" + i).innerHTML = hex[i];
   }
+
   // Si la valeur calculee correspond a la valeur attendue
   if (hex[0] == document.getElementById("sol1").innerHTML && hex[1] == document.getElementById("sol2").innerHTML)
   {

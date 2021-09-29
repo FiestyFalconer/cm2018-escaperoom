@@ -14,7 +14,9 @@ let nb2 = ""; // Deuxiemme nombre (lors dz clique)
 
 const NBTIME = 5000; // Nombre de secondes augmenté à chaque movaise tentative
 
-//condition pour jsp
+sessionStorage.setItem("login", false);
+
+// Crée la session si elle n'existe pas 
 if(!sessionStorage.getItem("time")){
   sessionStorage.setItem("time",5000); 
 }
@@ -22,15 +24,12 @@ if(!sessionStorage.getItem("countTime")){
   sessionStorage.setItem("countTime",5); 
 }
 
-
-sessionStorage.setItem("login", false);
-
-//afficher les nombres dans les "_"
+// Afficher les nombres dans les "_"
 function btnClick(nbLettre) {
   let nbAffichage1 = document.getElementById("valueEn1");
   let nbAffichage2 = document.getElementById("valueEn2");
 
-  //savoir si on a deja cliquer une fois
+  // Savoir si on a deja cliquer une fois
   if (nbPresser == 0) {
     nb1 = nbLettre;
     nbPresser += 1;
@@ -42,12 +41,13 @@ function btnClick(nbLettre) {
     nbAffichage2.innerHTML = nb2;
     boolPresser = true;
   }
-  //savoir si on a trouver le code
+  // Savoir si on a trouver le code
   if (boolPresser) {
     verificationLogin(nb1, nb2)
   }
 }
-//verification si on a bien trouver le code
+
+// Vérification si on a bien trouver le code
 function verificationLogin(nb1, nb2) {
   if (nb1 == String(sol1) && nb2 == String(sol2)) {
     sessionStorage.setItem("login", true);
@@ -59,31 +59,29 @@ function verificationLogin(nb1, nb2) {
 }
 let interval;
 
-//commencer le timer
+// Lance le timer
 function beginTimer(){
 
   travelListButtons(true);
 
-  // augmenter les secondes a chaque fois qu'on fait un erreur
-  let timeSession = sessionStorage.getItem('time') // session pour garder les secondes d'attends
+  // Session pour garder les secondes d'attends
+  let timeSession = sessionStorage.getItem('time')
 
-  console.log(timeSession); // Afficher les millisecondes dans la console
-  /*********************************/
-  interval = setInterval(showTimer, 1000); //timer en 1000 miliseconde
-  /*********************************/
+  interval = setInterval(showTimer, 1000); // Timer (1000 miliseconde)
 
-  timeSession = parseInt(timeSession); //converti la variable en int
+  // Converti en int
+  timeSession = parseInt(timeSession); 
   
   sessionStorage.setItem("countTime",(parseInt(timeSession)/1000));
   
-  timeSession += NBTIME;// augmenter les secondes
+  // Augmenter les secondes
+  timeSession += NBTIME;
 
-  sessionStorage.setItem("time", timeSession);// garder le nombre de secondes dans la session
-  
-
+  // Garder le nombre de secondes dans la session
+  sessionStorage.setItem("time", timeSession);
 }
 
-//suprimer les donnees des variables et enlever le disabled des boutons
+// Supprimer les données des variables et enlever le disabled des boutons
 function deleteNbLogin() {
   let nbAffichage1 = document.getElementById("valueEn1");
   let nbAffichage2 = document.getElementById("valueEn2");
@@ -95,28 +93,32 @@ function deleteNbLogin() {
   boolPresser = false;
   travelListButtons(false);
 }
-//mettre les boutons en "disabled"
+
+// Mettre les boutons en "disabled"
 function travelListButtons(boolButtons) {
   let btnButtons = document.getElementsByTagName("input");
   for (let i = 0; i < 16; i++) {
-    let hexa = i.toString(16).toUpperCase();//Converti les nombres décimal en hexadécimal et les met en majuscules (lettres)
+    let hexa = i.toString(16).toUpperCase(); // Converti les nombres décimal en hexadécimal et les met en majuscules (lettres)
     btnButtons[hexa].disabled = boolButtons;
   }
 }
+
 // Afficher le timer
 function showTimer(){
-  //avoir les données de la session
+
+  // Avoir les données de la session
   let countTime = sessionStorage.getItem("countTime")
-  //affichage du timer
+
+  // Affichage du timer
   let nbTime = document.getElementById('nbTime');
-  nbTime.hidden = false; //montrer le timer
+  nbTime.hidden = false; // Montrer le timer
 
-  nbTime.innerHTML = String(countTime);// affichage des nombres dans le timer
-  console.log(countTime);// affichage des nombres dans la console
-  countTime = countTime - 1; // subtracion du timer
-  sessionStorage.setItem("countTime", countTime); // garder le valeur dans la session
+  nbTime.innerHTML = String(countTime); // Affichage des nombres dans le timer
+  console.log(countTime); // Affichage des nombres dans la console
+  countTime = countTime - 1; // Soustracion du timer
+  sessionStorage.setItem("countTime", countTime); // Garder le valeur dans la session
 
-  //condition pour arreter le timer
+  // Condition pour arreter le timer
   if(countTime <= -1){
     deleteNbLogin();
     clearInterval(interval);
