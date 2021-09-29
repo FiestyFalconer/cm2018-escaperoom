@@ -1,29 +1,53 @@
 /*
-Auteur  : Lopes Miguel, Troller Fabian, Juling Guntram
-Date    : 2018.11.06
-Description : Code javascript cité des metiers
- */
- body{
+    Auteur  : Lopes Miguel, Troller Fabian, Juling Guntram
+    Date    : 2018.11.06
+    Description : Code javascript cité des metiers
+
+    Modification :
+    Auteur       : Flavio Soares
+    Date         : 09.2021
+*/
+
+body
+{
     width: 100vw;
     height: 100vh;
 }
-.solutions {
+
+.solutions
+{
     font-size: 2.5em;
 }
 
-.binary {
+.binary
+{
     font-size: 1.5em;
 }
 
-.hexadecimal {
+.hexadecimal
+{
     font-size: 1.5em;
 }
-hr {
+
+hr
+{
     border-color: #949593 !important;
 }
-.winImage {
+
+.winImage
+{
   background-image: url('../img/cadena_ouvert.png');
   height: 100vh;
   background-repeat:no-repeat;
   background-size:100% 100%;
+}
+
+#logo{
+    width: 150px;
+    height: 150px;
+
+    position: absolute;
+    top: 80%;
+    left: 87%;
+    transform: translate(-50%, -50%);
 }

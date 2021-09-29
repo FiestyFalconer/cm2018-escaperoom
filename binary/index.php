@@ -22,8 +22,8 @@ $en2 = $tableauCode[0]['en2']; // Récupère l' énigmes 2 de la db
 <head>
 
     <title>Cité des métiers | Binary</title>
-    <link rel="stylesheet" type="text/css" href="css/style.css">
     <link rel="stylesheet" type="text/css" href="css/bootstrap.min.css">
+    <link rel="stylesheet" type="text/css" href="css/style.css">
     <meta name="viewport" content="width=device-width, initial-scale=1">
 
     <script>
@@ -37,6 +37,7 @@ $en2 = $tableauCode[0]['en2']; // Récupère l' énigmes 2 de la db
 <body class="text-center" style="font-size: 2.5em;">
 <main id="endgame" hidden><div class="winImage"></div></main>
 <main id="game" class="container-fluid">
+    <img src="./img/logo.png" id="logo" alt="logo">
     <section class="col-xs-6">
         <div class="col-xs-6">
             <div class="row">
@@ -88,9 +89,6 @@ $en2 = $tableauCode[0]['en2']; // Récupère l' énigmes 2 de la db
         </div>
     </section>
     <section class="col-xs-6">
-        <div class="row">
-            <br>
-        </div>
         <br>
         <div class="row">
             <span id="message">Veuillez entrer le code</span>
