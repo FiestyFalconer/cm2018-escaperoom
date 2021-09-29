@@ -47,6 +47,7 @@ function showButtons()
 
 <body>
     <h1 class="text-primary">Saisissez le code secret</h1>
+    <p id="nbTime" hidden></p>
     <p class="text-primary">
         <span id="valueEn1">_</span>
         &nbsp;
