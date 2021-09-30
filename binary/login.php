@@ -37,13 +37,6 @@ function showButtons()
     
     <link rel="stylesheet" type="text/css" href="css/bootstrap.min.css">
     <link rel="stylesheet" type="text/css" href="css/login.css">
-
-    <script src="js/login.js"></script>
-    <script>
-        let sol1 = "<?=$en1?>"; // Enigme 1 
-        let sol2 = "<?=$en2?>"; // Enigme 2
-    </script>
-    
 </head>
 
 <body>
@@ -59,4 +52,9 @@ function showButtons()
         <?= showButtons() ?>
     </div>
 </body>
+<script src="js/login.js"></script>
+    <script>
+        let sol1 = "<?=$en1?>"; // Enigme 1 
+        let sol2 = "<?=$en2?>"; // Enigme 2
+    </script>
 </html>

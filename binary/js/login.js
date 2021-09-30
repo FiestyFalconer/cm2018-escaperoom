@@ -21,7 +21,7 @@ if(!sessionStorage.getItem("time")){
   sessionStorage.setItem("time",5000); 
 }
 if(!sessionStorage.getItem("countTime")){
-  sessionStorage.setItem("countTime",5); 
+  sessionStorage.setItem("countTime",0); 
 }
 
 // Afficher les nombres dans les "_"
@@ -124,4 +124,10 @@ function showTimer(){
     clearInterval(interval);
     nbTime.hidden = true;
   }
+}
+
+// Garde l'état d'avant lors ce qu'on rafraichit la page
+if(sessionStorage.getItem("countTime") > 0){
+  clearInterval(interval);
+  beginTimer();
 }

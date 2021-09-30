@@ -24,9 +24,13 @@ var listBin = [
   DEFAULT_CHAR,
   DEFAULT_CHAR
 ];
+// Crée la session si elle n'existe pas 
+if(!sessionStorage.getItem("login")){
+  sessionStorage.setItem("login",false); 
+}
 
 let session = sessionStorage.getItem("login"); // Session
-
+alert(session);
 // Redirige l'utilisateur vers la page login.php si il n'est pas connecté
 if(session == "false"){
   goToLogin();
