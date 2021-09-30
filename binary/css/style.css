@@ -43,11 +43,13 @@ hr
 }
 
 #logo{
-    width: 150px;
-    height: 150px;
+    width: 125px;
+    height: 125px;
 
     position: absolute;
     top: 80%;
     left: 87%;
     transform: translate(-50%, -50%);
+
+    opacity: 60%;
 }

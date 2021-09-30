@@ -43,11 +43,13 @@ function showButtons()
         let sol1 = "<?=$en1?>"; // Enigme 1 
         let sol2 = "<?=$en2?>"; // Enigme 2
     </script>
+    
 </head>
 
 <body>
+    <img src="./img/logo.png" id="logo" alt="logo">
     <h1 class="text-primary">Saisissez le code secret</h1>
-    <p id="nbTime" hidden></p>
+    <p class="text-primary" id="nbTime" hidden></p>
     <p class="text-primary">
         <span id="valueEn1">_</span>
         &nbsp;

@@ -46,6 +46,8 @@ function checkVariables() {
   let btn0 = document.getElementById("b0").removeAttribute("disabled");
   let btn1 = document.getElementById("b1").removeAttribute("disabled");
   let btn2 = document.getElementById("b2").removeAttribute("disabled");
+
+  sessionStorage.setItem("time",5000);
 }
 
 // Permet d'inserer la valeur dans la liste en decalant la liste

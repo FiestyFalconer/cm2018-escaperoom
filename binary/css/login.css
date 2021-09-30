@@ -29,7 +29,7 @@
 
 h1{
     text-align: center;
-    font-size: 5vw;
+    font-size: 4.5vw;
     font-family: fantasy;
 }
 
@@ -44,4 +44,21 @@ p{
 
 #valueEn2{
     color: green;
+}
+
+#logo{
+    width: 100px;
+    height: 100px;
+
+    position: absolute;
+    top: 74%;
+    left: 89%;
+    transform: translate(-50%, -50%);
+
+    opacity: 60%;
+}
+
+#nbTime {
+    font-size: 3rem;
+    font-weight: bolder;
 }
