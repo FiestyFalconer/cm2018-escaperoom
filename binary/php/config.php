@@ -8,7 +8,7 @@
 */
 
 // Constantes pour la connexion à la base de données
-DEFINE('DB_HOST', "127.0.0.1");
-DEFINE('DB_NAME', "escapegame_2021");
-DEFINE('DB_USER', "userEscape");
-DEFINE('DB_PASSWORD', "Super");
+DEFINE('DB_HOST', "x22f6.myd.infomaniak.com");
+DEFINE('DB_NAME', "x22f6_escape21");
+DEFINE('DB_USER', "x22f6_admin_er");
+DEFINE('DB_PASSWORD', "wRl7eDE-bR2");

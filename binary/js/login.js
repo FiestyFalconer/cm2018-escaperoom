@@ -51,7 +51,7 @@ function btnClick(nbLettre) {
 function verificationLogin(nb1, nb2) {
   if (nb1 == String(sol1) && nb2 == String(sol2)) {
     sessionStorage.setItem("login", true);
-    document.location.href = "http://git/cm2018-escaperoom/binary/index.php"; //aller dans la page d'accuille
+    document.location.href = "https://cm21.cfpti.ch/enigme3/binary/index.php"; //aller dans la page d'accuille
   }
   else {
     beginTimer();

@@ -30,7 +30,7 @@ if(!sessionStorage.getItem("login")){
 }
 
 let session = sessionStorage.getItem("login"); // Session
-alert(session);
+
 // Redirige l'utilisateur vers la page login.php si il n'est pas connecté
 if(session == "false"){
   goToLogin();
@@ -38,7 +38,7 @@ if(session == "false"){
 
 // Redirige l'utilisateur vers la page login.php
 function goToLogin(){
-  document.location.href="http://git/cm2018-escaperoom/binary/login.php";
+  document.location.href="https://cm21.cfpti.ch/enigme3/binary/login.php";
 }
 
 // Vérifie les variables
