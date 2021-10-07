@@ -25,7 +25,7 @@ var listBin = [
   DEFAULT_CHAR
 ];
 
-let session = sessionStorage.getItem("login"); // Session
+let session = sessionStorage.getItem("login"); // Récupère l'état de connection (connecté ou non)
 
 // Redirige l'utilisateur vers la page login.php si il n'est pas connecté
 if(session == "false"){
@@ -42,7 +42,7 @@ function checkVariables() {
   let solution1 = document.getElementById("sol1").innerHTML = sol1;
   let solution2 = document.getElementById("sol2").innerHTML = sol2;
 
-  // Met les 3 buttons (0; 1; Effacer) en Enable
+  // Met les 3 buttons ("0", "1", "Effacer") en Enable
   let btn0 = document.getElementById("b0").removeAttribute("disabled");
   let btn1 = document.getElementById("b1").removeAttribute("disabled");
   let btn2 = document.getElementById("b2").removeAttribute("disabled");
@@ -98,17 +98,19 @@ function UpdateView(listBin) {
     document.getElementById("hex" + i).innerHTML = hex[i];
   }
 
-  // Si la valeur calculee correspond a la valeur attendue
+  // Si la valeur calculee correspond à la valeur attendue
   if (hex[0] == document.getElementById("sol1").innerHTML && hex[1] == document.getElementById("sol2").innerHTML)
   {
     Win();
   }
 }
 
-// Finis la partie
+// Partie Gagné
 function Win() {
   let endGame = document.getElementById("endgame").removeAttribute("hidden"); // Enleve l'attribut hidden pour afficher l'image de fin de partie
   let game = document.getElementById("game").hidden = true; // Cache le jeu
-  sessionStorage.setItem("time",5000);
-  setTimeout(goToLogin,30000);
+
+  // "Prépare la prochaine partie"
+  sessionStorage.setItem("time",5000); // stock la variable time = 5000 dans la session
+  setTimeout(goToLogin,30000); // renvois l'utilisateur vers la page de login après un délais 30 secondes
 }
