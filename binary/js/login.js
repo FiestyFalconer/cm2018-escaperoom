@@ -27,9 +27,8 @@ if(!sessionStorage.getItem("time"))
 }
 
 // Crée la variable "countTime" dans la session si elle n'existe pas 
-if(!sessionStorage.getItem("countTime"))
-{
-  sessionStorage.setItem("countTime",5); 
+if(!sessionStorage.getItem("countTime")){
+  sessionStorage.setItem("countTime",0); 
 }
 
 // Récupère la variable countTime stocké dans la session
@@ -143,4 +142,10 @@ function showTimer(){
     clearInterval(interval);
     nbTime.hidden = true;
   }
+}
+
+// Garde l'état d'avant lors ce qu'on rafraichit la page
+if(sessionStorage.getItem("countTime") > 0){
+  clearInterval(interval);
+  beginTimer();
 }

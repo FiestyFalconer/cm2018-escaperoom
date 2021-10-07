@@ -58,11 +58,4 @@ function showButtons()
     let sol1 = "<?=$en1?>"; // Enigme 1 
     let sol2 = "<?=$en2?>"; // Enigme 2
 </script>
-
-<script type="text/javascript">
-    window.onbeforeunload = function() {
-    return false;
-    }
-</script>
-
 </html>

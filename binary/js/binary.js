@@ -24,6 +24,10 @@ var listBin = [
   DEFAULT_CHAR,
   DEFAULT_CHAR
 ];
+// Crée la session si elle n'existe pas 
+if(!sessionStorage.getItem("login")){
+  sessionStorage.setItem("login",false); 
+}
 
 let session = sessionStorage.getItem("login"); // Récupère l'état de connection (connecté ou non)
 
@@ -34,7 +38,7 @@ if(session == "false"){
 
 // Redirige l'utilisateur vers la page login.php
 function goToLogin(){
-  document.location.href="http://git/cm2018-escaperoom/binary/login.php";
+  document.location.href="https://cm21.cfpti.ch/enigme3/binary/login.php";
 }
 
 // Vérifie les variables
