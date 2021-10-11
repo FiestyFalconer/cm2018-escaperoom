@@ -22,10 +22,11 @@ $en2 = $tableauCode[0]['en2']; // Récupère le code de l' énigmes 2 dans la ba
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Login</title>
+    <title>Cité des métiers | Login</title>
     
     <link rel="stylesheet" type="text/css" href="css/bootstrap.min.css">
     <link rel="stylesheet" type="text/css" href="css/login.css">
+    <link rel="icon" href="./img/user_icon.ico" />
 </head>
 
 <body>

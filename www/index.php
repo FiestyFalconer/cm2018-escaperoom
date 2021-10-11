@@ -22,11 +22,11 @@ $en2 = $tableauCode[0]['en2']; // Récupère l' énigmes 2 de la db
 
 <head>
 
-    <title>Cité des métiers | Binary</title>
+    <title>Cité des métiers | Enigme 3</title>
     <link rel="stylesheet" type="text/css" href="css/bootstrap.min.css">
-    <link rel="stylesheet" type="text/css" href="css/style.css">
+    <link rel="stylesheet" type="text/css" href="css/index.css">
     <meta name="viewport" content="width=device-width, initial-scale=1">
-
+    <link rel="icon" href="./img/3_icon.ico" />
 
 </head>
 
@@ -120,6 +120,6 @@ $en2 = $tableauCode[0]['en2']; // Récupère l' énigmes 2 de la db
     let sol2 = "<?= $en2 ?>"; // Enigme 2
 </script>
 
-<script src="js/binary.js"></script>
+<script src="js/index.js"></script>
 
 </html>
