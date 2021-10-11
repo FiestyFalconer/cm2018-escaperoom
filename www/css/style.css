@@ -36,13 +36,21 @@ hr
     border-color: #949593 !important;
 }
 
-.winImage
+#endgame{
+    width: 100vw;
+    height: 100vh;
+    background-color: #337ab7;
+}
+
+#winImage
 {
-  background-image: url('../img/cadena_ouvert.png');
-  width: 100vw;
-  height: 90vh;
-  background-size: cover;
-  background-repeat: no-repeat;
+    width: 100vw;
+    height: 100vh;
+}
+
+img {
+    width: 90%;
+    height: 85%;
 }
 
 #logo{
