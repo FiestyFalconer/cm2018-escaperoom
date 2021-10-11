@@ -1,9 +1,4 @@
 /*
-    Auteur  : Lopes Miguel, Troller Fabian, Juling Guntram
-    Date    : 2018.11.06
-    Description : Code javascript cité des metiers
-
-    Modification :
     Auteur       : Flavio Soares
     Date         : 09.2021
 */
@@ -15,21 +10,37 @@ body
     height: 100vh;
 }
 
+hr
+{
+    border-color: silver !important;
+}
+
+/* Style de la solution (nombre tout en haut de la page) */
 .solutions
 {
     font-size: 4em;
 }
 
+/* Style du Nombre Binaire */
 .binary
 {
     font-size: 2.5em;
 }
 
+/* Style du nombre hexadecimal (nombre tout en bas de la page) */
 .hexadecimal
 {
-    font-size: 2.5em;
+    font-size: 3em;
 }
 
+/* Style de la puissance de 2 */
+.carreDeDeux{
+    font-size: 24px;
+    color: silver;
+    font-weight: bold;
+}
+
+/* Style des 2 boutons binaire */
 .btnBinaire{
     font-size: 2.5em;
     width: 140px;
@@ -37,45 +48,34 @@ body
     font-weight: bold;
 }
 
+/* Style du bouton effacer */
 #btnEffacer{
     font-size: 2.5em;
     width: 300px;
     height: 100px;
 }
 
+/* Style du message "Veuillez entrer le code" */
 #message{
     font-size: 44px;
     font-weight: bold;
 }
 
-hr
-{
-    border-color: #949593 !important;
-}
-
+/* Style du Main de fin */
 #endgame{
     width: 100vw;
     height: 100vh;
     background-color: #337ab7;
 }
 
+/* Style de l'image de fin */
 #winImage
 {
-    width: 100vw;
-    height: 100vh;
-}
-
-.carreDeDeux{
-    font-size: 24px;
-    color: silver;
-    font-weight: bold;
-}
-
-img {
     width: 90%;
     height: 85%;
 }
 
+/* Style du logo CFPT */
 #logo{
     width: 125px;
     height: 125px;

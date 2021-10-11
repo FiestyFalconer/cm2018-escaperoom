@@ -32,9 +32,7 @@ $en2 = $tableauCode[0]['en2']; // Récupère l' énigmes 2 de la db
 
 <body class="text-center">
     <main id="endgame" hidden>
-        <div id="winImage">
-            <img src="./img/cadena_ouvert.png" alt="winImg">
-        </div>
+        <img id="winImage" src="./img/cadena_ouvert.png" alt="winImg">
     </main>
     <main id="game" class="container-fluid">
         <img src="./img/logo.png" id="logo" alt="logo">
