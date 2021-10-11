@@ -30,7 +30,7 @@ $en2 = $tableauCode[0]['en2']; // Récupère l' énigmes 2 de la db
 
 </head>
 
-<body class="text-center" style="font-size: 2.5em;">
+<body class="text-center">
     <main id="endgame" hidden>
         <div id="winImage">
             <img src="./img/cadena_ouvert.png" alt="winImg">
@@ -44,7 +44,7 @@ $en2 = $tableauCode[0]['en2']; // Récupère l' énigmes 2 de la db
                     <span class="solutions" id="sol1">?</span>
                 </div>
                 <div class="row">
-                    <p style="font-size:18px;">
+                    <p class="carreDeDeux">
                         &nbsp;2<sup>3</sup>&nbsp;
                         &nbsp;2<sup>2</sup>&nbsp;
                         &nbsp;2<sup>1</sup>&nbsp;
@@ -68,7 +68,7 @@ $en2 = $tableauCode[0]['en2']; // Récupère l' énigmes 2 de la db
                     <span class="solutions" id="sol2">?</span>
                 </div>
                 <div class="row">
-                    <p style="font-size:18px;">
+                    <p class="carreDeDeux">
                         &nbsp;2<sup>3</sup>&nbsp;
                         &nbsp;2<sup>2</sup>&nbsp;
                         &nbsp;2<sup>1</sup>&nbsp;
@@ -99,16 +99,16 @@ $en2 = $tableauCode[0]['en2']; // Récupère l' énigmes 2 de la db
                     <div class="col-xs-6 col-xs-offset-3">
                         <div class="row">
                             <div class="col-xs-6">
-                                <input disabled value="0" type="Button" style="height: 100px" onclick="ListSetter(0)" id="b0" class="btn btn-lg btn-block btn-primary" />
+                                <input disabled value="0" type="Button" onclick="ListSetter(0)" id="btn0" class="btn btnBinaire btn-primary" />
                             </div>
                             <div class="col-xs-6">
-                                <input disabled value="1" type="Button" style="height: 100px" onclick="ListSetter(1)" id="b1" class="btn btn-lg btn-block btn-primary" />
+                                <input disabled value="1" type="Button" onclick="ListSetter(1)" id="btn1" class="btn btnBinaire btn-primary" />
                             </div>
                         </div>
                         <br>
                         <div class="row">
                             <div class="col-xs-12">
-                                <input disabled value="Effacer" type="Button" style="height: 50px" onclick="ResetArray()" id="b2" class="btn btn-lg btn-block btn-danger" />
+                                <input disabled value="Effacer" type="Button" onclick="ResetArray()" id="btnEffacer" class="btn btn-danger" />
                             </div>
                         </div>
                     </div>

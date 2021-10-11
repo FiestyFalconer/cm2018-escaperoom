@@ -10,25 +10,42 @@
 
 body
 {
+    font-size: 2.5em;
     width: 100vw;
     height: 100vh;
-    overflow-x: hidden; 
-    overflow-y: hidden;
 }
 
 .solutions
 {
-    font-size: 2.5em;
+    font-size: 4em;
 }
 
 .binary
 {
-    font-size: 1.5em;
+    font-size: 2.5em;
 }
 
 .hexadecimal
 {
-    font-size: 1.5em;
+    font-size: 2.5em;
+}
+
+.btnBinaire{
+    font-size: 2.5em;
+    width: 140px;
+    height: 100px;
+    font-weight: bold;
+}
+
+#btnEffacer{
+    font-size: 2.5em;
+    width: 300px;
+    height: 100px;
+}
+
+#message{
+    font-size: 44px;
+    font-weight: bold;
 }
 
 hr
@@ -46,6 +63,12 @@ hr
 {
     width: 100vw;
     height: 100vh;
+}
+
+.carreDeDeux{
+    font-size: 24px;
+    color: silver;
+    font-weight: bold;
 }
 
 img {

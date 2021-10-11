@@ -47,9 +47,9 @@ function checkVariables() {
   let solution2 = document.getElementById("sol2").innerHTML = sol2;
 
   // Met les 3 buttons ("0", "1", "Effacer") en Enable
-  let btn0 = document.getElementById("b0").removeAttribute("disabled");
-  let btn1 = document.getElementById("b1").removeAttribute("disabled");
-  let btn2 = document.getElementById("b2").removeAttribute("disabled");
+  let btn0 = document.getElementById("btn0").removeAttribute("disabled");
+  let btn1 = document.getElementById("btn1").removeAttribute("disabled");
+  let btnEffacer = document.getElementById("btnEffacer").removeAttribute("disabled");
 
   sessionStorage.setItem("time",5000);
 }
