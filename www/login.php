@@ -8,24 +8,13 @@
 */
 
 require_once "./php/pdo.php";
+require_once "./php/tools.php";
 
 $tableauCode = getEnigmeCode(); // Récupère les codes 3 énigmes de la base de donnée
 
 $en1 = $tableauCode[0]['en1']; // Récupère le code de l'énigmes 1 dans la base de donnée
 $en2 = $tableauCode[0]['en2']; // Récupère le code de l' énigmes 2 dans la base de donnée
 
-// Afficher les bouttons
-function showButtons()
-{
-    $chaine = '<div class="btnContainer">';
-
-    for ($i = 0; $i <= 15; $i++)
-    {
-        $hexa = strtoupper(dechex($i)); // Converti les nombres décimal en hexadécimal, met en majuscule (lettre alphabet)
-        $chaine .= "<input value=\"$hexa\" type=\"Button\" onclick=\"btnClick('$hexa')\" id=\"$hexa\" class=\"btn btn-primary\" />";
-    }
-    return $chaine;
-}
 ?>
 <!DOCTYPE html>
 <html lang="en">

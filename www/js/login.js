@@ -63,7 +63,7 @@ function verificationLogin(nb1, nb2) {
   // Connecte l'utilisateur et le redirige vers une autre page
   if (nb1 == String(sol1) && nb2 == String(sol2)) {
     sessionStorage.setItem("login", true);
-    document.location.href = "http://git/cm2018-escaperoom/binary/index.php"; // Redirige le client vers la page "index.php"
+    document.location.href = "https://cm21.cfpti.ch/enigme3/www/index.php"; // Redirige le client vers la page "index.php"
   }
   // Lance le timer (pénalité)
   else {
@@ -130,7 +130,7 @@ function showTimer(){
   // Affichage du timer
   let nbTime = document.getElementById('nbTime');
 
-  nbTime.innerHTML = String(countTime); // Converti countTime en string pour l'afficher sur la page
+  nbTime.innerHTML = "Votre prochaine tentative est dans : " + String(countTime) + " secondes"; // Converti countTime en string pour l'afficher sur la page
   console.log(countTime); // Affichage du timer dans la console
   countTime = countTime - 1; // Décrémente de 1
   sessionStorage.setItem("countTime", countTime); // Stock la valeur dans la session
