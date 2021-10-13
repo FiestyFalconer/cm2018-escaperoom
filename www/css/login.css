@@ -1,0 +1,64 @@
+/*
+    Auteur  : Soares Flavio, Rodrigo De Castilho E Sousa
+    Date    : 2021.09.16
+*/
+
+*{
+    margin: 0;
+    padding: 0;
+}
+
+.btnContainer{
+    margin: auto;
+    display: flex;
+    flex-wrap: wrap;
+    width: 60vw;
+    justify-content: space-around;
+}
+
+.btnContainer input{
+    min-width: 12vw;
+    max-width: 14vw;
+
+    min-height: 6vh;
+    max-height: 8vh;
+
+    font-size: 4vh;
+    margin: 0.5rem;
+}
+
+h1{
+    text-align: center;
+    font-size: 4.5vw;
+    font-family: fantasy;
+}
+
+p{
+    text-align: center;
+    font-size: 12vw;
+}
+
+#valueEn1{
+    color: red;
+}
+
+#valueEn2{
+    color: Lime;
+}
+
+#logo{
+    width: 100px;
+    height: 100px;
+
+    position: absolute;
+    top: 74%;
+    left: 89%;
+    transform: translate(-50%, -50%);
+
+    opacity: 60%;
+}
+
+#nbTime {
+    font-size: 3rem;
+    font-weight: bolder;
+}

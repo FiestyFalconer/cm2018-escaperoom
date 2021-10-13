@@ -12,9 +12,12 @@ Les joueurs arrivent à l'école d'informatique pour venir s'inscrire, mais les 
 
 ## Les énigmes
 
-### Première énigme - Les câbles
+### Première énigme - L'ordinateur
 
-Cette énigme consiste à brancher trois câbles aléatoires à leurs connecteurs pour pouvoir déverrouiller l'accès au premier code de sortie ainsi qu'à la deuxième énigme. Ce code combiné à un autre permettra de débloquer la sortie dès qu'il sera indiqué dans la troisième énigme.
+Cette énigme consiste à brancher un ordinateur pour pouvoir l'allumer.
+Une fois celui-ci allumé les joueurs devront trouver le mot de passe pour déverrouiller le poste.
+Lorsque celui-ci est déverrouiller, les utilisateurs devront trouver le premier code de sortie contenu dans un des fichiers affichés sur le bureau.
+Ce code combiné à un autre permettra de débloquer la sortie dès qu'il sera indiqué dans la troisième énigme.
 
 ### Deuxième énigme - Le labyrinthe
 
@@ -22,4 +25,8 @@ Cette énigme consiste à indiquer le chemin de sortie à Raichu. Il faut lui do
 
 ### Troisième énigme - Le code hexadécimal
 
-Cette énigme consiste à rentrer le code hexadécimal que la première et la deuxième énigme auront donné. Ce code devra être écrit en binaire dans l'énigme, les joueurs devront alors devoir faire la conversion du code hexadécimal en binaire. Le code binaire fonctionnant avec le décalage de bits, les joueurs devront rentrer d'abord la première valeur et ensuite la deuxième. Une fois le code entré, un petit message s'affiche pour leurs dires qu'ils ont réussis et ils peuvent sortir.
+Lorsque la première et la deuxième énigme sont réussies, les joueurs obtiendront grâce à chaque énigmes un code hexadécimal qui leur sera utile pour accéder à la troisième énigme.
+Lorsque le code est erroné les bouttons se désactivent temporairement, 5 secondes de plus à chaque tentatives erronées (exemple, 5s, 10s, 15s, etc..).
+Lorsque la combinaison est la bonne ils sont redirigés vers la page d'index qui contient la troisième énigme.
+Celle-ci consiste à convertire le code hexadécimal obtenu dans les 2 autres énigmes en code binaire.
+Lorsque le code rentré est le bon, une image affichant un message de réussite s'affiche, celui-ci reste affiché un certain temps avant de disparaitre (30-60 secondes à définir).
