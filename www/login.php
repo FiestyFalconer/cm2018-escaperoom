@@ -7,8 +7,7 @@
     Version     : 1.0
 */
 
-require_once "./php/pdo.php";
-require_once "./php/tools.php";
+require_once "./router.php";
 
 $tableauCode = getEnigmeCode(); // Récupère les codes 3 énigmes de la base de donnée
 
@@ -24,13 +23,13 @@ $en2 = $tableauCode[0]['en2']; // Récupère le code de l' énigmes 2 dans la ba
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Cité des métiers | Login</title>
     
-    <link rel="stylesheet" type="text/css" href="css/bootstrap.min.css">
-    <link rel="stylesheet" type="text/css" href="css/login.css">
-    <link rel="icon" href="./img/user_icon.ico" />
+    <link rel="stylesheet" type="text/css" href="./view/css/bootstrap.min.css">
+    <link rel="stylesheet" type="text/css" href="./view/css/login.css">
+    <link rel="icon" href="./view/img/user.ico" />
 </head>
 
 <body>
-    <img src="./img/logo.png" id="logo" alt="logo">
+    <img src="./view/img/logo.png" id="logo" alt="logo">
     <h1 class="text-primary">Saisissez le code secret</h1>
     <p class="text-primary" id="nbTime" hidden></p>
     <p class="text-primary">
@@ -43,7 +42,7 @@ $en2 = $tableauCode[0]['en2']; // Récupère le code de l' énigmes 2 dans la ba
     </div>
 </body>
 
-<script src="js/login.js"></script>
+<script src="./controller/login.js"></script>
 <script>
     let sol1 = "<?=$en1?>"; // Enigme 1 
     let sol2 = "<?=$en2?>"; // Enigme 2

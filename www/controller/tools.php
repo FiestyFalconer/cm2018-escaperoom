@@ -20,7 +20,7 @@ function showButtons()
     return $chaine;
 }
 
-////////////////////////////////////////////////////////////////////////
+//Affichage des "carre de deux"
 function showDash($carreDeDeux){
   $string = " <div class='row'>";
 

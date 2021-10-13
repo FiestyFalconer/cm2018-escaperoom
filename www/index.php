@@ -9,8 +9,7 @@
     Date             : 09.2021
 */
 
-require_once "./php/pdo.php";
-require_once "./php/tools.php";
+require_once "./router.php";
 
 $tableauCode = getEnigmeCode(); // Récupère les 3 énigmes de la db
 
@@ -24,26 +23,26 @@ $en2 = $tableauCode[0]['en2']; // Récupère l' énigmes 2 de la db
 <head>
 
     <title>Cité des métiers | Enigme 3</title>
-    <link rel="stylesheet" type="text/css" href="css/bootstrap.min.css">
-    <link rel="stylesheet" type="text/css" href="css/index.css">
+    <link rel="stylesheet" type="text/css" href="./view/css/bootstrap.min.css">
+    <link rel="stylesheet" type="text/css" href="./view/css/index.css">
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <link rel="icon" href="./img/3_icon.ico" />
+    <link rel="icon" href="./view/img/trois.ico" />
 
 </head>
 
 <body class="text-center">
     <main id="endgame" hidden>
-        <img id="winImage" src="./img/cadena_ouvert.png" alt="winImg">
+        <img id="winImage" src="./view/img/cadena_ouvert.png" alt="winImg">
     </main>
     <main id="game" class="container-fluid">
-        <img src="./img/logo.png" id="logo" alt="logo">
+        <img src="./view/img/logo.png" id="logo" alt="logo">
         <section class="col-xs-6">
             <div class="col-xs-6">
                 <div class="row">
                     <span class="solutions" id="sol1">?</span>
                 </div>
 
-                <?=showDash(true)?>
+                <?= showDash(true) ?>
 
                 <div class="row hexadecimal">
                     <span id="hex0">0</span>
@@ -54,7 +53,7 @@ $en2 = $tableauCode[0]['en2']; // Récupère l' énigmes 2 de la db
                     <span class="solutions" id="sol2">?</span>
                 </div>
 
-                <?=showDash(false)?>
+                <?= showDash(false) ?>
 
                 <div class="row hexadecimal">
                     <span id="hex1">0</span>
@@ -95,6 +94,6 @@ $en2 = $tableauCode[0]['en2']; // Récupère l' énigmes 2 de la db
     let sol2 = "<?= $en2 ?>"; // Enigme 2
 </script>
 
-<script src="js/index.js"></script>
+<script src="./controller/index.js"></script>
 
 </html>
