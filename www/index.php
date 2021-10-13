@@ -10,6 +10,7 @@
 */
 
 require_once "./php/pdo.php";
+require_once "./php/tools.php";
 
 $tableauCode = getEnigmeCode(); // Récupère les 3 énigmes de la db
 
@@ -41,22 +42,9 @@ $en2 = $tableauCode[0]['en2']; // Récupère l' énigmes 2 de la db
                 <div class="row">
                     <span class="solutions" id="sol1">?</span>
                 </div>
-                <div class="row">
-                    <p class="carreDeDeux">
-                        &nbsp;2<sup>3</sup>&nbsp;
-                        &nbsp;2<sup>2</sup>&nbsp;
-                        &nbsp;2<sup>1</sup>&nbsp;
-                        &nbsp;2<sup>0</sup>&nbsp;
-                    </p>
-                </div>
-                <div class="row binary">
-                    <hr>
-                    <?php
-                    for ($i = 0; $i < 4; $i++)
-                        echo '&nbsp;<span id="value' . $i . '">_</span>&nbsp;';
-                    ?>
-                    <hr>
-                </div>
+
+                <?=showDash(true)?>
+
                 <div class="row hexadecimal">
                     <span id="hex0">0</span>
                 </div>
@@ -65,22 +53,9 @@ $en2 = $tableauCode[0]['en2']; // Récupère l' énigmes 2 de la db
                 <div class="row">
                     <span class="solutions" id="sol2">?</span>
                 </div>
-                <div class="row">
-                    <p class="carreDeDeux">
-                        &nbsp;2<sup>3</sup>&nbsp;
-                        &nbsp;2<sup>2</sup>&nbsp;
-                        &nbsp;2<sup>1</sup>&nbsp;
-                        &nbsp;2<sup>0</sup>&nbsp;
-                    </p>
-                </div>
-                <div class="row binary">
-                    <hr>
-                    <?php
-                    for ($i = 4; $i < 8; $i++)
-                        echo '&nbsp;<span id="value' . $i . '">_</span>&nbsp;';
-                    ?>
-                    <hr>
-                </div>
+
+                <?=showDash(false)?>
+
                 <div class="row hexadecimal">
                     <span id="hex1">0</span>
                 </div>
