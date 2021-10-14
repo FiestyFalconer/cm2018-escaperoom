@@ -9,18 +9,18 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Cité des métiers | Enigme 3</title>
 
-    <link rel="stylesheet" type="text/css" href="../assets/css/bootstrap.min.css">
-    <link rel="stylesheet" type="text/css" href="../assets/css/index.css">
-    <link rel="icon" href="../assets/img/index.ico"/>
+    <link rel="stylesheet" type="text/css" href="../enigme3/assets/css/bootstrap.min.css">
+    <link rel="stylesheet" type="text/css" href="../enigme3/assets/css/index.css">
+    <link rel="icon" href="../enigme3/assets/img/index.ico"/>
 
 </head>
 
 <body class="text-center">
     <main id="endgame" hidden>
-        <img id="winImage" src="../assets/img/cadena_ouvert.png" alt="winImg">
+        <img id="winImage" src="../enigme3/assets/img/cadena_ouvert.png" alt="winImg">
     </main>
     <main id="game" class="container-fluid">
-        <img src="../assets/img/logo.png" id="logo" alt="logo">
+        <img src="../enigme3/assets/img/logo.png" id="logo" alt="logo">
         <section class="col-xs-6">
             <div class="col-xs-6">
                 <div class="row">
@@ -79,6 +79,6 @@
     let sol2 = "<?= $en2 ?>"; // Enigme 2
 </script>
 
-<script src="../assets/js/index.js"></script>
+<script src="../enigme3/assets/js/index.js"></script>
 
 </html>

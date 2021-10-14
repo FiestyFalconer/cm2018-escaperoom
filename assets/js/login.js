@@ -63,7 +63,7 @@ function verificationLogin(nb1, nb2) {
   // Connecte l'utilisateur et le redirige vers une autre page
   if (nb1 == String(sol1) && nb2 == String(sol2)) {
     sessionStorage.setItem("login", true);
-    document.location.href = "https://cm21.cfpti.ch/enigme3/www/index.php"; // Redirige le client vers la page "index.php"
+    document.location.href = "https://cm21.cfpti.ch/enigme3/index.php"; // Redirige le client vers la page "index.php"
   }
   // Lance le timer (pénalité)
   else {
