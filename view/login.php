@@ -9,13 +9,13 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Cité des métiers | Login</title>
     
-    <link rel="stylesheet" type="text/css" href="../enigme3/assets/css/bootstrap.min.css">
-    <link rel="stylesheet" type="text/css" href="../enigme3/assets/css/login.css">
-    <link rel="icon" href="../enigme3/assets/img/login.ico"/>
+    <link rel="stylesheet" type="text/css" href="../escape_game_enigme3/assets/css/bootstrap.min.css">
+    <link rel="stylesheet" type="text/css" href="../escape_game_enigme3/assets/css/login.css">
+    <link rel="icon" href="../escape_game_enigme3/assets/img/login.ico"/>
 </head>
 
 <body>
-    <img src="../enigme3/assets/img/logo.png" id="logo" alt="logo">
+    <img src="../escape_game_enigme3/assets/img/logo.png" id="logo" alt="logo">
     <h1 class="text-primary">Saisissez le code secret</h1>
     <p class="text-primary" id="nbTime" hidden></p>
     <p class="text-primary">
@@ -28,7 +28,7 @@
     </div>
 </body>
 
-<script src="../enigme3/assets/js/login.js"></script>
+<script src="../escape_game_enigme3/assets/js/login.js"></script>
 <script>
     let sol1 = "<?=$en1?>"; // Enigme 1 
     let sol2 = "<?=$en2?>"; // Enigme 2

@@ -38,7 +38,7 @@ if(session == "false"){
 
 // Redirige l'utilisateur vers la page login.php
 function goToLogin(){
-  document.location.href="https://cm21.cfpti.ch/enigme3/login.php";
+  document.location.href="https://cm21.cfpti.ch/enigme3/www/login.php";
 }
 
 // Vérifie les variables
