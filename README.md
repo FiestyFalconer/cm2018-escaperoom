@@ -29,4 +29,4 @@ Lorsque la première et la deuxième énigme sont réussies, les joueurs obtiend
 Lorsque le code est erroné les bouttons se désactivent temporairement, 5 secondes de plus à chaque tentatives erronées (exemple, 5s, 10s, 15s, etc..).
 Lorsque la combinaison est la bonne ils sont redirigés vers la page d'index qui contient la troisième énigme.
 Celle-ci consiste à convertire le code hexadécimal obtenu dans les 2 autres énigmes en code binaire.
-Lorsque le code rentré est le bon, une image affichant un message de réussite s'affiche, celui-ci reste affiché un certain temps avant de disparaitre (30-60 secondes à définir).
+Lorsque le code rentré est le bon, une image affichant un message de réussite s'affiche, celui-ci reste affiché un certain temps avant de rediriger les joueurs vers la première page (30-60 secondes à définir, permet d'automatiser pour les prochains joueurs).
